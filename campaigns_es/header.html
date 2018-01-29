@@ -1,0 +1,965 @@
+<!--STYLES-->
+            <style>
+                /*DESKTOP - TABLET*/
+                energyLabelContainer #energyLabelBg{display:none !important;}#energyLabelBg{display:none !important;}
+                    /*ANCHOS ESPECIALES*/
+                        .col-id-ser{float:left; width:12.5%}
+                        .col-bus-lat{float:left; width: 15%}
+                        .col-bus-centr{float:left; width: 70%}
+                        .col-nav{float: left; width: 16.6%; margin-top:-5px;margin-bottom: -35px;}
+                        .col-op-nav{float:left; width: 25%;}
+                        .col-op-nav-fx{float:left; width: 26%;}
+                        .col-banner-nav-fx{float:left; width: 49%;}
+                        .col-op-50{float:left; width: 50%;}
+                        .col-est-nav{float:left; width: 37.5%;}
+                        .col-op-100{float: left; width: 100%; margin-right: 10px;}
+                            /*SM*/
+                            @media (max-width: 992px) {
+                                .breadcrumbs-new-tax{display:none !important;}
+                            }
+                            /*SM*/
+                            /*MD*/
+                            @media (min-width: 992px) {
+                                .col-id-ser{float:left; width:12.5%}
+                                .col-bus-lat{float:left; width: 15%}
+                                .col-bus-centr{float:left; width: 70%}
+                                .col-nav{float: left; width: 16.6%; margin-top:-5px;margin-bottom: -35px;}
+                                .col-op-nav{float:left; width: 25%;}
+                                .col-op-nav-fx{float:left; width: 26%;}
+                                .col-banner-nav-fx{float:left; width: 49%;}
+                                .col-op-50{float:left; width: 50%;}
+                                .col-est-nav{float:left; width: 37.5%;}
+                                .col-op-100{float: left; width: 100%; margin-right: 10px;}
+                            }
+                            /*MD*/
+                            /*LG*/
+                            @media (min-width: 1200px){
+                                .col-id-ser{float:left; width:12.5%}
+                                .col-bus-lat{float:left; width: 15%}
+                                .col-bus-centr{float:left; width: 70%}
+                                .col-nav{float: left; width: 16.6%; margin-top:-5px;margin-bottom: -35px;}
+                                .col-op-nav{float:left; width: 25%;}
+                                .col-op-nav-fx{float:left; width: 26%;}
+                                .col-banner-nav-fx{float:left; width: 49%;}
+                                .col-op-50{float:left; width: 50%;}
+                                .col-est-nav{float:left; width: 37.5%;}
+                                .col-op-100{float: left; width: 100%; margin-right: 10px;}
+                            }
+                        /*LG*/
+                    /*ANCHOS ESPECIALES*/
+                    /*ALIGNS*/
+                        .align-right{text-align: right}
+                        .align-center{text-align: center}
+                        .align-left{text-align: left}
+                    /*ALIGNS*/
+                    /*BREADCRUMBS*/
+                        .breadcrumbs-new-tax{margin-bottom: 15px !important; font-family:verdana; font-size:11px; color:#AAA; text-align:left; width: 1060px; margin: 0 auto; padding-left: 15px;}
+                        .breadcrumbs-new-tax a{color:#AAA!important; text-decoration:none!important;}
+                        .breadcrumbs-new-tax a:hover{text-decoration:underline!important;}
+                        .breadcrumbs-activo{color:#000; font-weight:bold;}
+                    /*BREADCRUMBS*/
+                    /*BARRA COMPRA ONLINE*/
+                        .top-compra-online{background-color: rgba(211,211,211,0.2);height: 30px;}
+                        .elemento-top-compra-online{margin-top: 8px;}
+                        .enlace-top-compra-online{color: black !important; text-decoration: none !important;}
+                        .enlace-top-compra-online:hover{text-decoration: underline !important;}
+                        .img-compra-online{display: block; position: absolute; width: 10%; margin-top: -2px;}
+                    /*BARRA COMPRA ONLINE*/
+                    /*BARRA SERVICIOS IDIOMAS*/
+                        .top-servicios-idiomas{height:35px;}
+                        .enlace-top-servicios-idiomas{color: darkgrey !important; text-decoration: none !important;}
+                        .enlace-top-servicios-idiomas:hover{text-decoration: underline !important;}
+                        .elemento-top-servicios-idiomas{font-size: 11px; color: darkgrey !important; text-decoration: none !important; padding-bottom: 5px; margin-bottom: 0px; margin-top: 5px;}
+                        .elemento-top-servicios-idiomas:hover{text-decoration: underline !important; cursor: pointer;}
+                        .extra-margin-left{margin-left:15px}
+                        .extra-margin-right{margin-right:15px}
+                        .separador-idiomas-servicios{margin-top:0px !important; margin-bottom: 0px !important;}
+                        .selector-idiomas{display: none; z-index: 2; position: absolute;width: 72px;border: solid thin lightgrey; margin-left: 60px; background-color: white;}
+                        .despliega-idiomas:hover + .selector-idiomas{display: block;}
+                        .selector-idiomas:hover{display: block;}
+                        .enlace-selector-idioma{color: lightgrey;}
+                        .enlace-selector-idioma:hover{color: lightgrey;}
+                        .elemento-selector-idioma{color: lightgrey; margin-top: 5px; margin-bottom: 5px; margin-left: 5px;}
+                        .location:hover + .selector-location{display: block;}
+                        .selector-location{display: none; position: absolute; background-color: white !important; border: solid thin lightgrey; margin-left: 55px; z-index: 99; padding-right: 5px;}
+                        .selector-location:hover{display: block;}
+                        .elemento-selector-location{margin-left: 5px; margin-top:2px; margin-bottom:2px; padding:3px 0px 3px 0px;}
+                        .link-selector-location{color: #ccc !important; text-decoration: none; font-size: 10px;}
+                        .link-selector-location:hover{color: #ccc !important; text-decoration: underline;}
+                    /*BARRA SERVICIOS IDIOMAS*/
+                    /*BARRA BUSCADOR*/
+                        .top-barra-buscador{margin-top: 10px; height: 55px}
+                        .img-logo-ikea{max-width: 88%}
+                        .barra-buscador-field{width: 100%; border: solid thin lightgrey; height: 40px; margin-top: 3px; padding-left: 10px;}
+                        .btn-buscar{display: block; position: relative; float: right; margin-top: -35px; background: none !important; border: none !important; filter: grayscale(100%);}
+                        .imagen-buscador{width: 85%}
+                        .despliega-login:hover + .menu-login{display: block;}
+                        .menu-login{display:none; position: absolute; z-index: 2; width: 130px; border: solid thin lightgrey; margin-left: -45px; background-color: white; z-index:999}
+                        .menu-login:hover{display: block;}
+                        .inner-text{text-align:center; margin-top:1em;margin-bottom:2em;}
+                        .parrafo-btn-incia-sesion{text-align: center;}
+                        .btn-IniciaSesion{border: solid thin lightgrey; padding: 10px; color: black;}
+                        .btn-IniciaSesion:hover{color: white; background-color: lightgrey; text-decoration: none !important;}
+                    /*BARRA BUSCADOR*/
+                    /*BARRA NAVEGACION*/
+                        .top-barra-navegacion{margin-top: 10px; height: 40px;}
+                        .elemento-navegacion{font-weight: bold; font-size: 14px; padding-bottom: 5px;}
+                        .elemento-navegacion:hover{cursor:pointer}
+                        .flecha-btn{width: 5%; margin-left: 10px;}
+                        .elemento-desplegable-navegacion{font-size: 12px; color: black !important; text-decoration: none; margin-top: 10px; margin-bottom: 15px; display: block; margin-left: 10px; text-align: left !important;}
+                        .despliega-productos:hover + .productos{display: block}
+                        .productos{display: none; position: absolute; border: solid thin lightgrey; width:1060px; margin-top:-15px; background-color: white !important; z-index: 99999}
+                        .productos:hover{display: block}
+                        .despliega-estancias:hover + .estancias{display: block;}
+                        .estancias{display: none; position: absolute; border: solid thin lightgrey; width:1060px; margin-top:-15px; margin-left: -176px; background-color: white !important; z-index: 99999}
+                        .estancias:hover{display: block;}
+                        .despliega-novedades:hover + .novedades{display: block;}
+                        .novedades{display: none; position: absolute; border: solid thin lightgrey; margin-top:-15px; background-color: white !important; z-index: 99999}
+                        .novedades:hover{display: block;}
+                        .despliega-promociones:hover + .promociones{display: block;}
+                        .promociones{display: none; position: absolute; border: solid thin lightgrey; margin-top:-15px; background-color: white !important; z-index: 99999}
+                        .promociones:hover{display: block;}
+                        .despliega-inspiracion:hover + .inspiracion{display: block;}
+                        .inspiracion{display: none; position: absolute; border: solid thin lightgrey; margin-top:-15px; margin-left:35px; background-color: white !important; z-index: 99999}
+                        .inspiracion:hover{display: block;}
+                        .despliega-sobreIKEA:hover + .sobreIKEA{display: block;}
+                        .sobreIKEA{display: none; position: absolute; border: solid thin lightgrey; margin-top:-15px; margin-left: -115px; width: 295px; background-color: white !important; z-index: 99999}
+                        .sobreIKEA:hover{display: block;}
+                        .caja-productos{width: 505px; height: 315px; margin-left: 0px;margin-top: 0px;}
+                        .caja-estancias{width: 387.5px; height: 310px; margin-left: 0px;margin-top: 0px;}
+                        /*R&R*/
+                            .dot-ratingsreviews-desplegable-banner{display: inline-block!important; vertical-align: middle!important; white-space: nowrap!important; height: 25px; margin-left: 0px;}
+                            .hp-rating-stars{position: relative!important; display: block!important; overflow: hidden!important;}
+                            .hp-rating-stars-off{font-size: 20px !important; color: #eee!important;}
+                            .hp-rating-stars-on{font-size: 20px !important; color: #fc0!important; margin-top: -1em!important; margin-top: -28px !important; padding-top: 1px;}
+                            .hp-ratings-number{font-size: 11px; margin-top: -19px; position: absolute; right: 30px; font-weight: normal !important;}      
+                        /*R&R*/
+                    /*BARRA NAVEGACION*/
+                /*DESKTOP - TABLET*/
+                /*MOBILE*/
+                    /*ANCHOS ESPECIALES*/
+                        @media (min-width:758px) and (max-width:990px){
+                            .top-mobile{height: 40px !important;}
+                            .top-navegacion-movil{padding-top: 0px !important;margin-top: 5px;}
+                            .elemento-barra-navegacion-movil{position: absolute; float:left;}
+                            .separador-top-movil{margin-top:30px !important;}
+                        }
+                        @media (min-width: 768px) {
+                            .dropdown-buscador{margin-top: 15px !important; margin-left: 0px !important; padding-left: 0px !important;}
+                            .dropdown{width: 100% !important}
+                            .buscadorNav-small{width: 100% !important}
+                            .buscadorForm{width: 100% !important}
+                            .buscador{width: 100% !important;}
+                            .elemento-barra-navegacion-movil{position: absolute; float:left;}
+                            .separador-top-movil{margin-top:30px !important;}
+                            }
+                        @media (min-width: 992px) {
+                        }
+                        @media (min-width: 1200px){}
+                    /*ANCHOS ESPECIALES*/
+                    /*BARRA TOP MOBILE*/
+                        .top-mobile{margin-top: -15px}
+                        .logo-movil{width: 90px; padding-left: 10px; float:left;}
+                        .movil-lupa{float: right; width: 30px; margin-top: -2px;}
+                        .movil-carrito{float: right; width: 40px; margin-top: -7px; margin-right:5px}
+                        .dropdown-buscador{top: -3px !important; width: 100% !important; border-radius: 0px !important; box-shadow: none !important; position: relative !important; margin-bottom: 0px !important;
+                        border: none !important; padding-bottom: 0px !important; height: 45px;}
+                        .buscador{margin-top: -20px; height: 28px !important}
+                        .buscador:focus{border-color: lightgrey !important; box-shadow: none !important}
+                        .btn-buscar-movil{display: block; position: relative; float: right; margin-top: -28px; font-size: 21px; text-align: center; width: 32px; background-color: lightgrey; border: none !important;
+                        border-top-right-radius: 5px; border-bottom-right-radius: 5px; color: white;}
+                        .navbar-form{width: 100% !important;margin-left: 0 !important;}
+                    /*BARRA TOP MOBILE*/
+                        .btn-menu-movil{margin-top: -10px; margin-right: 0px; padding-bottom:0px !important; margin-bottom: 0px !important;}
+                        .icon-bar{background-color: black !important;}
+                        .top-navegacion-movil{padding-top: 45px; width: 100%;}
+                        .elemento-barra-navegacion-movil{position: relative; float:left;width: 100px; text-align: left; font-weight: bolder; font-size: 11px;}
+                        .separador-top-movil{margin-top: 10px; margin-bottom: 0px !important; background-color: black !important; color: black !important; height: 1px;}
+                        .extra-margin-left-movil{margin-left: 10px}
+                        .novedades-mvl{display: none;}
+                        .promociones-mvl{display: none;}
+                        .tiendas-mvl{display: none;}
+                        .conecta-mvl{display: none;}
+                        .novedades-mvl-desplegable{display: block;}
+                        .promociones-mvl-desplegable{display: block;}
+                        .tiendas-mvl-desplegable{display: block;}
+                        .conecta-mvl-desplegable{display: block;}
+                        @media (min-width:360px){
+                            .novedades-mvl{display: block;}
+                            .novedades-mvl-desplegable{display: none;}
+                        }
+                        @media (min-width:480px){
+                            .promociones-mvl{display: block;}
+                            .promociones-mvl-desplegable{display: none;}
+                        }
+                        @media (min-width:560px){
+                            .tiendas-mvl{display: block;}
+                            .tiendas-mvl-desplegable{display: none;}
+                        }
+                        @media (min-width:660px){
+                            .conecta-mvl{display: block;}
+                            .conecta-mvl-desplegable{display: none;}
+                        }
+                        @media (min-width:660px) and (max-width:990px){
+                            .btn-menu-movil{display: none;}
+                            .elemento-barra-navegacion-movil{width: 16%;}
+                        }
+                    /*BARRA TOP MOBILE*/
+                    /*DROPDOWNS*/
+                        .dropdown-menu{margin-top: -3px !important;}
+                        .dropdown-productos{top: 81px !important; width: 100% !important; border-radius: 0px !important; box-shadow: none !important; position: absolute !important; margin-bottom: 0px !important;
+                        border: none !important; padding-bottom: 0px !important;padding-top: 0px !important;}
+                        .dropdown-estancias{top: 81px !important; width: 100% !important; border-radius: 0px !important; box-shadow: none !important; position: absolute !important; margin-bottom: 0px !important;
+                        border: none !important; padding-bottom: 0px !important;padding-top: 0px !important;}
+                        .dropdown-novedades{top: 81px !important; width: 100% !important; border-radius: 0px !important; box-shadow: none !important; position: absolute !important; margin-bottom: 0px !important;
+                        border: none !important; padding-bottom: 0px !important;padding-top: 0px !important;}
+                        .enlace-desplegables-movil{color: black !important;}
+                        .elemento-desplegables-movil{font-size: 12px; border: solid thin lightgrey; padding-left: 50px; margin-top: 0px; margin-bottom: -1px; position: relative;
+                        height: 55px;}
+                        .enlace-elementos-navegacion{color: black;}
+                        .enlace-elementos-navegacion:hover{color: black !important; text-decoration: none !important}
+                        .simple{padding-top: 20px;}
+                        .doble{padding-top:10px;}
+                        .img-productos-movil{position: absolute; width: 40px; display: block; margin-top: 15px; margin-left: 4px;}
+                        .extra-larga{margin-top:-1px !important}
+                        .medio-larga{margin-top:9px !important;}
+                        .flecha-btn-movil{position: relative; float: right; display: block; top: -35px; right: 10px;}
+                        .desplegable-lateral{height: 25%;}
+                        .elemento-desplegables-movil-internos{font-size: 12px; border: solid thin lightgrey; padding-left: 10px; margin-top: 0px; margin-bottom: -1px; position: relative; height: 35px; padding-top: 8px;}
+                        .elemento-desplegables-movil-internos:hover{color: black !important; text-decoration: none !important}
+                        .dropdown-novedades-interno{position: absolute; top: 115px; padding-top: 0px !important; padding-bottom: 0px !important; margin-bottom: -46px !important; width: 100%; border-radius: 0px !important;
+                        border: none !important; height: 109px; box-shadow: none !important;}
+                        .conectar-desplegable{background-color: #eeeeee; border-top-color: black;}
+                        .flecha-desplegar-interna{width: 3%; float: right; margin-right: 10px; margin-top: 5px;}
+                    /*DROPDOWNS*/
+                /*MOBILE*/
+            </style>
+        <!--STYLES-->
+    </head>
+    <body>
+        <!--DESKTOP & TABLET-->
+            <div class="hidden-xs hidden-sm">
+                <!--SCRIPTS-->
+                    <script src="/ms/es_ES/campaigns/new/js/new_breadcrumbs_IKEA_ES.js"></script>            
+                <!--SCRIPTS-->
+                <!--BARRA COMPRA ONLINE-->
+                    <div class="container top-compra-online">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3">
+                                <p class="elemento-top-compra-online"><b>Compra Online</b></p>
+                            </div>
+                            <div class="col-md-3 col-lg-3">
+                                <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Click_and_collect.png" class="img-responsive img-compra-online">
+                                <a href="/ms/es_ES/campaigns/compraonline/#clickandcollect" class="enlace-top-compra-online">
+                                    <p class="elemento-top-compra-online align-center">Click&amp;Collect desde <b>16€</b></p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-lg-3">
+                                <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Delivery.png" class="img-responsive img-compra-online">
+                                <a href="/ms/es_ES/campaigns/compraonline/#entrega" class="enlace-top-compra-online">
+                                    <p class="elemento-top-compra-online align-center">Entrega a domicilio desde <b>55€</b></p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-lg-3">
+                                <a href="/ms/es_ES/campaigns/compraonline/" class="enlace-top-compra-online">
+                                    <p class="elemento-top-compra-online align-right"><b>Más información ›</b></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <!--BARRA COMPRA ONLINE-->
+                <!--BARRA SERVICIOS/IDIOMAS-->
+                    <div class="container top-servicios-idiomas">
+                        <div class="row">
+                            <div class="col-id-ser">
+                                <a href="https://www.family.ikea.es/mapa/" class="enlace-top-servicios-idiomas">
+                                    <p class="elemento-top-servicios-idiomas align-left extra-margin-left">IKEA FAMILY</p>
+                                </a>
+                            </div>
+                            <div class="col-id-ser">
+                                <a href="/es/es/business/business_new/ikea_business.html" class="enlace-top-servicios-idiomas">
+                                    <p class="elemento-top-servicios-idiomas align-left">IKEA BUSINESS</p>
+                                </a>
+                            </div>
+                            <div class="col-id-ser">
+                                <a href="/ms/es_ES/customer-service/index.html" class="enlace-top-servicios-idiomas">
+                                    <p class="elemento-top-servicios-idiomas align-left">Atención al cliente</p>
+                                </a>
+                            </div>
+                            <div class="col-id-ser">
+                                <a href="/ms/es_ES/campaigns/elige-tu-tienda/" class="enlace-top-servicios-idiomas">
+                                    <p class="elemento-top-servicios-idiomas align-left">Elige tu tienda</p>
+                                </a>
+                            </div>
+                            <div class="col-id-ser">
+                                <p></p>
+                            </div>
+                            <div class="col-id-ser">
+                                <a href="https://www.ikea.com/es/en/" class="enlace-top-servicios-idiomas">
+                                    <p class="elemento-top-servicios-idiomas align-center">Now in english</p>
+                                </a>
+                            </div>
+                            <div class="col-id-ser">
+                                <p class="elemento-top-servicios-idiomas location align-right extra-margin-right">
+                                    IKEA Islas
+                                </p>
+                                <div class="selector-location">
+                                    <p class="elemento-selector-location"><a href="https://www.islas.ikea.es/webselector/baleares" class="link-selector-location">Islas Baleares</a></p>
+                                    <p class="elemento-selector-location"><a href="https://www.islas.ikea.es/webselector/canarias" class="link-selector-location">Islas Canarias</a></p>
+                                </div>
+                            </div>
+                            <div class="col-id-ser">
+                                <p class="elemento-top-servicios-idiomas align-right extra-margin-right despliega-idiomas"><b>Idioma</b></p>
+                                <div class="selector-idiomas">
+                                    <a mporgnav href="https://ca.ikea.com/es/ca/" class="enlace-selector-idioma" id="lnkLang3Header" onclick="return switchLanguage('ca');
+                                    function switchLanguage(lang) {
+                                        MP.SrcUrl=decodeURIComponent('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();
+                                        MP.switchLanguage(MP.UrlLang==lang?'es':lang);
+                                        return false;
+                                    } "><p class="elemento-selector-idioma">Català</p></a>
+                                    <a mporgnav href="https://eu.ikea.com/es/eu/" class="enlace-selector-idioma" id="lnkLang4Header" onclick="return switchLanguage('eu');
+                                    function switchLanguage(lang) {
+                                        MP.SrcUrl=decodeURIComponent('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();
+                                        MP.switchLanguage(MP.UrlLang==lang?'es':lang);
+                                        return false;
+                                    } "><p class="elemento-selector-idioma">Euskera</p>
+                                    </a>
+                                    <a mporgnav="" href="https://www.ikea.com/es/es/" class="enlace-selector-idioma" id="lnkLang3Header" onclick="return switchLanguage('ca');
+                                        function switchLanguage(lang) {
+                                        MP.SrcUrl=decodeURIComponent('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();
+                                        MP.switchLanguage(MP.UrlLang==lang?'es':lang);
+                                        return false;
+                                    } "><p  class="elemento-selector-idioma">Castellano</p>
+                                    </a>
+                                    <a href="#" class="enlace-selector-idioma" onclick="changeLanguage()">
+                                        <p class="elemento-selector-idioma">English</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="separador-idiomas-servicios">
+                    </div>
+                <!--BARRA SERVICIOS/IDIOMAS-->
+                <!--BARRA BUSCADOR-->
+                    <div class="container top-barra-buscador">
+                        <form id="myAccount" action="/webapp/wcs/stores/servlet/LogonForm" method="get">
+                            <div>
+                                <input type="hidden" name="storeId" value="11">
+                                <input type="hidden" name="langId" value="-5">
+                                <input type="hidden" name="catalogId" value="11001">
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-bus-lat">
+                                <a href="/es/es/">
+                                    <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/logo.png" class="img-responsive extra-margin-left img-logo-ikea">
+                                </a>
+                            </div>
+                            <div class="col-bus-centr">
+                                <form class="" action="/es/es/search/" method="get" id="searchForm" onsubmit="return checkSearch(this)">
+                                    <div class="form-group">
+                                        <input type="text" class="barra-buscador-field" placeholder="Buscar" value name="query" autocomplete="off">
+                                        <button id="lnkSearchBtnHeader" type="submit" class="btn-buscar">
+                                            <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/lupa.png" class="imagen-btn-buscar">
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-bus-lat">
+                                <div class="col-md-6 col-lg-6">
+                                    <a href="#" class="enlace-login despliega-login">
+                                        <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/login.png" class="img-responsive imagen-buscador" id="login-ico">
+                                    </a>
+                                    <div class="menu-login">
+                                        <div id="loginFormFunction">
+                                            <p class="inner-text">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p>
+                                            <p class="parrafo-btn-incia-sesion">
+                                                <a href="javascript:logonLink();" rel="nofollow" class="btn-IniciaSesion">Inicia Sesión</a>
+                                            </p>
+                                            <hr class="hr-login"><p style="text-align:center; font-size:0.8em;">¿No tienes cuenta? <a href="" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>
+                                        </div>
+                                        <script type="text/javascript">
+                                            //<![CDATA[
+                                            var storeId = "11";
+                                            var userInfo = getUserInfo('11','normal');
+                                            updateWelcomeText();
+                                            document.observe('dom:loaded', function(){
+                                                userInfo = getUserInfo('11');                            
+                                                updateNoOfCartItems('11');
+                                                generateScLinkListener('11');
+                                            });
+                                            function updateWelcomeText(){
+                                                var userLoggedIn = '<p style="text-align:center; margin-top:1em;margin-bottom:2em; margin-left: 1em; margin-right: 1em; font-size:12px">¡Hola {title} {firstname} {lastname}!</p><p style="text-align:center; font-size: 11px; margin-top: 2em;">Accede a tu <a href="https://secure.ikea.com/webapp/wcs/stores/servlet/MyProfile?langId=-5&amp;storeId=11">área personal.</a></p><p style="text-align:center; font-size: 11px; margin-top: 2em;"><a href="/ms/es_ES/service-offer/ikea-donde-esta-mi-pedido.html">¿Dónde está mi pedido?</a></p><hr><p style="text-align:center; font-size: 11px">¿No eres {firstname}?<a href="/webapp/wcs/stores/servlet/Logoff?langId=-5&amp;storeId=11&amp;forgetMe=true" rel="nofollow"> Haz clic aquí</a></p>';
+                                                var userNotLoggedIn = '<p style="text-align:center; margin-top:1em;margin-bottom:2em;">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p><a href="javascript:logonLink();" class="btn-IniciaSesion" rel="nofollow">Inicia Sesión</a><hr class="hr-login"><p style="text-align:center; font-size:0.8em;">¿No tienes cuenta? <a href="" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>';
+                                                if(userInfo != null && userInfo.firstName != "" && userInfo.firstName != ""){
+                                                    userLoggedIn = userLoggedIn.replace(/{firstname}/g,userInfo.firstName.escapeHTML());
+                                                    userLoggedIn = userLoggedIn.replace(/{lastname}/g,userInfo.lastName.escapeHTML());
+                                                    userLoggedIn = userLoggedIn.replace(/{title}/g,userInfo.title.escapeHTML());
+                                                    document.getElementById("loginFormFunction").innerHTML = userLoggedIn;
+                                                    document.getElementById("login-ico").style.filter = "none";
+                                                }
+                                                else{
+                                                    document.getElementById("loginFormFunction").innerHTML = userNotLoggedIn;
+                                                }
+                                            };
+                                            //]]>
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <a href="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay?storeId=11&langId=-5" class="enlace-carrito">
+                                        <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/shopping-cart.png" class="img-responsive imagen-buscador">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--BARRA BUSCADOR-->
+                <!--BARRA NAVEGACION-->
+                    <div class="container top-barra-navegacion">
+                        <div class="row">
+                            <div class="col-nav">
+                                <p class="elemento-navegacion align-left extra-margin-left despliega-productos">Productos<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
+                                <div class="productos">
+                                    <div class="row">
+                                        <div class="col-op-nav">
+                                            <a href="/ms/es_ES/campaigns/camas_colchones/index.html" class="elemento-desplegable-navegacion">Camas y colchones</a>
+                                            <a href="/ms/es_ES/campaigns/muebles/index.html" class="elemento-desplegable-navegacion">Muebles, armarios y estanterías</a>
+                                            <a href="/es/es/catalog/categories/departments/living_room/sofas_armchairs/" class="elemento-desplegable-navegacion">Sofás y sillones</a>
+                                            <a href="/ms/es_ES/campaigns/mesas_sillas/index.html" class="elemento-desplegable-navegacion">Mesas y sillas</a>
+                                            <a href="/es/es/catalog/categories/departments/Textiles/" class="elemento-desplegable-navegacion">Textiles</a>
+                                            <a href="/es/es/catalog/categories/departments/decoration/" class="elemento-desplegable-navegacion">Decoración y espejos</a>
+                                            <a href="/es/es/catalog/categories/departments/lighting/" class="elemento-desplegable-navegacion">Iluminación</a>
+                                            <a href="/es/es/catalog/categories/departments/cooking/" class="elemento-desplegable-navegacion">Menaje y utensilios de cocina</a>
+                                            <a href="/es/es/catalog/categories/departments/eating/" class="elemento-desplegable-navegacion">Vajilla, cristalería y cubertería</a>
+                                            <a href="/es/es/catalog/categories/departments/kitchen/appliances/" class="elemento-desplegable-navegacion">Electrodomésticos</a>
+                                            <a href="/es/es/catalog/categories/departments/home_electronics/" class="elemento-desplegable-navegacion">Tecnología y accesorios</a>
+                                        </div>
+                                        <div class="col-op-nav-fx">
+                                            <a href="/ms/es_ES/campaigns/lavabos_fregaderos/index.html" class="elemento-desplegable-navegacion">Lavabos, fregaderos y grifería</a>
+                                            <a href="/es/es/catalog/categories/departments/small_storage/" class="elemento-desplegable-navegacion">Organización y accesorios de almacenaje</a>
+                                            <a href="/ms/es_ES/campaigns/juguetes/index.html" class="elemento-desplegable-navegacion">Juguetes</a>
+                                            <a href="/es/es/catalog/categories/departments/ikea_family_products/" class="elemento-desplegable-navegacion">Ocio</a>
+                                            <a href="/ms/es_ES/campaigns/seguridad/index.html" class="elemento-desplegable-navegacion">Seguridad</a>
+                                            <a href="/ms/es_ES/campaigns/bricolaje/index.html" class="elemento-desplegable-navegacion">Bricolaje</a>
+                                            <a href="/ms/es_ES/campaigns/suelos/index.html" class="elemento-desplegable-navegacion">Suelos</a>
+                                            <a href="/ms/es_ES/campaigns/plantas_cultivos/index.html" class="elemento-desplegable-navegacion">Plantas, cultivos y jardinería</a>
+                                            <a href="/es/es/catalog/categories/departments/food/" class="elemento-desplegable-navegacion">Tienda sueca</a>
+                                            <a href="/es/es/catalog/allproducts/" class="elemento-desplegable-navegacion"><b>Todos los productos</b></a>
+                                        </div>
+                                        <div class="col-banner-nav-fx">
+                                            <!--COMPONENTE TEMPORAL-->
+                                            <style>
+                                                .hover-cajas{text-decoration: none !important}
+                                                .hover-cajas:hover .img-productos{filter:opacity(95%);}
+                                                .img-productos{margin-top:10px;}
+                                                .enlace-elemento-interior-productos{text-decoration: none !important; color: black !important;}
+                                                .elemento-interior-productos{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 30px; right: 350px;}
+                                                .titulo-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
+                                                .descripcion-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
+                                                .precio-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
+                                                .ud-interior-productos{text-align:left;font-weight: lighter;font-size: 10px;}
+                                                .call-to-action-productos{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
+                                                .call-to-action-productos-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
+                                                .call-to-action-productos-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
+                                                .call-to-action-productos-flecha{display: block; position: absolute; float: left; font-size: 25px; right: 40px; bottom: 23px;transition: all .3s ease-out;}         
+                                                .hover-cajas:hover .call-to-action-productos-titulo{text-decoration: underline !important}       
+                                                .hover-cajas:hover .call-to-action-productos-cuerpo{text-decoration: underline !important}  
+                                                .hover-cajas:hover .call-to-action-productos-flecha{transform: translateX(5px);}             
+                                                @-moz-document url-prefix(){
+                                                    .call-to-action-productos{height: 50px;}
+                                                }                      
+                                            </style>
+                                                <div class="caja-productos">
+                                                    <a href="https://www.ikea.com/es/es/catalog/categories/departments/lighting/tools/living_with_light/" class="hover-cajas" id="enlaceImagenProductos">                                    
+                                                        <img src="https://www.ikea.com/ms/es_ES/img/header_04_productos.jpg" class="img-productos" id="imagenProductos">
+                                                        <a href="https://www.ikea.com/es/es/catalog/products/70338932/" class="enlace-elemento-interior-productos" id="enlaceProductoBannerProductos">
+                                                            <div class="elemento-interior-productos" id="cajaProductoBannerProductos">
+                                                                <p class="titulo-interior-productos" id="tituloProductoBannerProductos">TRÅDFRI</p>
+                                                                <p class="descripcion-interior-productos" id="descProductoBannerProductos">Kit regulador intensidad</p>
+                                                                <p class="precio-interior-productos" id="precioProductoBannerProductos">€29,99<span class="ud-interior-productos">/ud</span></p>
+                                                                <div class="dot-ratingsreviews-desplegable-banner">
+                                                                    <span class="hp-rating-stars hp-rating-stars-off" aria-hidden="true">  ★★★★★ </span>
+                                                                    <span class="hp-rating-stars hp-rating-stars-on" id="porcentajeProductoBannerProductos" style="width:90% !important;" aria-hidden="true">  ★★★★★ </span>
+                                                                    <p class="hp-ratings-number" id="reviewsProductoBannerProductos">(32)</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </a>
+                                                    <a href="https://www.ikea.com/es/es/catalog/categories/departments/lighting/tools/living_with_light/" class="hover-cajas" id="enlaceCTAProductos">
+                                                        <div class="call-to-action-productos">
+                                                            <p class="call-to-action-productos-titulo" id="tituloCTAProductos">Descubre por que la luz es tan importante</p>
+                                                            <p class="call-to-action-productos-cuerpo" id="cuerpoCTAProductos">Elige la iluminación adecuada para cada estancia de tu hogar.</p>
+                                                            <span class="call-to-action-productos-flecha">›</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            <!--COMPONENTE TEMPORAL-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-nav">
+                                <p class="elemento-navegacion align-left despliega-estancias">Estancias<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
+                                <div class="estancias">
+                                    <div class="row">
+                                        <div class="col-op-nav">
+                                            <a href="/es/es/catalog/categories/departments/bedroom/" class="elemento-desplegable-navegacion">Dormitorio</a>
+                                            <a href="/es/es/catalog/categories/departments/living_room/" class="elemento-desplegable-navegacion">Salón</a>
+                                            <a href="/es/es/catalog/categories/departments/dining/" class="elemento-desplegable-navegacion">Comedor</a>
+                                            <a href="/es/es/catalog/categories/departments/hallway/" class="elemento-desplegable-navegacion">Recibidor</a>
+                                            <a href="/es/es/catalog/categories/departments/workspaces/" class="elemento-desplegable-navegacion">Espacio de trabajo</a>
+                                            <a href="/es/es/catalog/categories/departments/childrens_ikea/" class="elemento-desplegable-navegacion">Niños</a>
+                                            <a href="/es/es/catalog/categories/departments/kitchen/" class="elemento-desplegable-navegacion">Cocina</a>
+                                            <a href="/es/es/catalog/categories/departments/bathroom/" class="elemento-desplegable-navegacion">Baño</a>
+                                            <a href="/es/es/catalog/categories/departments/secondary_storage/" class="elemento-desplegable-navegacion">Trastero</a>
+                                            <a href="/es/es/catalog/categories/departments/laundry/" class="elemento-desplegable-navegacion">Lavadero</a>
+                                            <a href="/es/es/catalog/categories/departments/outdoor/" class="elemento-desplegable-navegacion">Terraza y jardín</a>
+                                        </div>
+                                        <div class="col-est-nav">
+                                            <!--COMPONENTE TEMPORAL-->
+                                            <style>
+                                                .hover-cajas{text-decoration: none !important}
+                                                .hover-cajas:hover .img-estancias-1{filter:opacity(95%);}
+                                                .img-estancias-1{margin-top:10px;}
+                                                .enlace-elemento-interior-estancias-1{text-decoration: none !important; color: black !important;}
+                                                .elemento-interior-estancias-1{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 35px; right: 620px;}
+                                                .titulo-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
+                                                .descripcion-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
+                                                .precio-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
+                                                .ud-interior-estancias-1{text-align:left;font-weight: lighter;font-size: 10px;}
+                                                .call-to-action-estancias-1{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
+                                                .call-to-action-estancias-1-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
+                                                .call-to-action-estancias-1-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
+                                                .call-to-action-estancias-1-flecha{display: block; position: absolute; float: left; font-size: 25px; left: 635px; bottom: 25px;transition: all .3s ease-out;}         
+                                                .hover-cajas:hover .call-to-action-estancias-1-titulo{text-decoration: underline !important}       
+                                                .hover-cajas:hover .call-to-action-estancias-1-cuerpo{text-decoration: underline !important}  
+                                                .hover-cajas:hover .call-to-action-estancias-1-flecha{transform: translateX(5px);}             
+                                                @-moz-document url-prefix(){
+                                                    .call-to-action-estancias-1{height: 50px;}
+                                                }      
+                                            </style>
+                                                <div class="caja-estancias">
+                                                    <a href="https://www.ikea.com/es/es/catalog/categories/departments/lighting/tools/living_with_light/" class="hover-cajas" id="enlaceCajaEstancias1">                                    
+                                                        <img src="https://www.ikea.com/ms/es_ES/img/header_04_estancias_1.jpg" class="img-estancias-1" id="imagenEstancias1">
+                                                        <a href="https://www.ikea.com/es/es/catalog/products/70338932/" class="enlace-elemento-interior-estancias-1" id="enlaceEstanciasBanner1">
+                                                            <div class="elemento-interior-estancias-1" id="cajaProductoBannerEstancias1">
+                                                                <p class="titulo-interior-estancias-1" id="tituloProductoBannerEstancias1">TRÅDFRI</p>
+                                                                <p class="descripcion-interior-estancias-1" id="descProductoBannerEstancias1">Kit regulador intensidad</p>
+                                                                <p class="precio-interior-estancias-1" id="precioProductoBannerEstancias1">€29,99<span class="ud-interior-estancias-1">/ud</span></p>
+                                                                <div class="dot-ratingsreviews-desplegable-banner">
+                                                                    <span class="hp-rating-stars hp-rating-stars-off" aria-hidden="true">  ★★★★★ </span>
+                                                                    <span class="hp-rating-stars hp-rating-stars-on" style="width:90% !important;" aria-hidden="true" id="porcentajeProductoBannerEstancias1">  ★★★★★ </span>
+                                                                    <p class="hp-ratings-number" id="reviewsProductoBannerEstancias1">(32)</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </a>
+                                                    <a href="https://www.ikea.com/es/es/catalog/categories/departments/lighting/tools/living_with_light/" class="hover-cajas" id="enlaceCTAEstancias1">
+                                                        <div class="call-to-action-estancias-1">
+                                                            <p class="call-to-action-estancias-1-titulo" id="tituloCTAEstancias1">Descubre por que la luz es tan importante</p>
+                                                            <p class="call-to-action-estancias-1-cuerpo" id="cuerpoCTAEstancias1">Elige la iluminación adecuada para cada estancia de tu hogar.</p>
+                                                            <span class="call-to-action-estancias-1-flecha">›</span>
+                                                        </div>
+                                                    </a>
+                                                </div>                               
+                                            <!--COMPONENTE TEMPORAL-->
+                                        </div>
+                                        <div class="col-est-nav">
+                                            <!--COMPONENTE TEMPORAL-->
+                                            <style>
+                                                .hover-cajas{text-decoration: none !important}
+                                                .hover-cajas:hover .img-estabcias-2{filter:opacity(95%);}
+                                                .img-estancias-2{margin-top:10px;}
+                                                .enlace-elemento-interior-estancias-2{text-decoration: none !important; color: black !important;}
+                                                .elemento-interior-estancias-2{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 35px; right: 220px;}
+                                                .titulo-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
+                                                .descripcion-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
+                                                .precio-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
+                                                .ud-interior-estancias-2{text-align:left;font-weight: lighter;font-size: 10px;}
+                                                .call-to-action-estancias-2{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
+                                                .call-to-action-estancias-2-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
+                                                .call-to-action-estancias-2-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
+                                                .call-to-action-estancias-2-flecha{display: block; position: absolute; float: left; font-size: 25px; right: 40px; bottom: 25px;transition: all .3s ease-out;}         
+                                                .hover-cajas:hover .call-to-action-estancias-2-titulo{text-decoration: underline !important}       
+                                                .hover-cajas:hover .call-to-action-estancias-2-cuerpo{text-decoration: underline !important}  
+                                                .hover-cajas:hover .call-to-action-estancias-2-flecha{transform: translateX(5px);}             
+                                                @-moz-document url-prefix(){
+                                                    .call-to-action-estancias-2{height: 50px;}
+                                                }       
+                                            </style>      
+                                                <div class="caja-estancias">
+                                                    <a href="https://www.ikea.com/es/es/catalog/categories/departments/cooking/" class="hover-cajas" id="enlaceCajaEstancias2">                                    
+                                                        <img src="https://www.ikea.com/ms/es_ES/img/header_04_estancias_2.jpg" class="img-estancias-2" id="imagenEstancias2">
+                                                        <a href="https://www.ikea.com/es/es/catalog/products/50289305/" class="enlace-elemento-interior-estancias-2" id="enlaceEstanciasBanner2">
+                                                            <div class="elemento-interior-estancias-2" id="cajaProductoBannerEstancias2">
+                                                                <p class="titulo-interior-estancias-2" id="tituloProductoBannerEstancias2">VARDAGEN</p>
+                                                                <p class="descripcion-interior-estancias-2" id="descProductoBannerEstancias2">Fuente de horno</p>
+                                                                <p class="precio-interior-estancias-2" id="precioProductoBannerEstancias1">€8,99<span class="ud-interior-estancias-2">/ud</span></p>
+                                                                <div class="dot-ratingsreviews-desplegable-banner">
+                                                                    <span class="hp-rating-stars hp-rating-stars-off" aria-hidden="true">  ★★★★★ </span>
+                                                                    <span class="hp-rating-stars hp-rating-stars-on" style="width:0% !important;" aria-hidden="true" id="porcentajeProductoBannerEstancias1">  ★★★★★ </span>
+                                                                    <p class="hp-ratings-number" id="reviewsProductoBannerEstancias2">(0)</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </a>
+                                                    <a href="https://www.ikea.com/es/es/catalog/categories/departments/cooking/" class="hover-cajas" id="enlaceCTAEstancias1">
+                                                        <div class="call-to-action-estancias-2">
+                                                            <p class="call-to-action-estancias-2-titulo" id="tituloCTAEstancias2">Los básicos para preparar tus recetas</p>
+                                                            <p class="call-to-action-estancias-2-cuerpo" id="cuerpoCTAEstancias2">Cocinar será más fácil si cuentas con los utensilios adecuados.</p>
+                                                            <span class="call-to-action-estancias-2-flecha">›</span>
+                                                        </div>
+                                                    </a>
+                                                </div>                          
+                                            <!--COMPONENTE TEMPORAL-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-nav">
+                                <p class="elemento-navegacion align-left despliega-novedades">Novedades<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
+                                <div class="novedades">
+                                    <div class="row">
+                                        <div class="col-op-100">
+                                            <a href="/ms/es_ES/campaigns/novedades/index.html" class="elemento-desplegable-navegacion">Todas las novedades</a>
+                                            <a href="/ms/es_ES/campaigns/precios_bajos/index.html" class="elemento-desplegable-navegacion">Hemos bajado el precio</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-nav">
+                                <p class="elemento-navegacion align-left despliega-promociones">Promociones<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
+                                <div class="promociones">
+                                    <div class="row">
+                                        <div class="col-op-100">
+                                            <a href="/ms/es_ES/campaigns/ofertas-y-promociones.html" class="elemento-desplegable-navegacion">Promociones</a>
+                                            <a href="/ms/es_ES/campaigns/ofertas_combo_muebles/index.html" class="elemento-desplegable-navegacion">Descuentos especiales</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-nav">
+                                <p class="elemento-navegacion align-center despliega-inspiracion">Inspiración<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
+                                <div class="inspiracion">
+                                    <div class="row">
+                                        <div class="col-op-100">
+                                            <a href="/es/es/ideas/" class="elemento-desplegable-navegacion">Ideas</a>
+                                            <a href="/ms/es_ES/campaigns/galeriafotos/index.html" class="elemento-desplegable-navegacion">Galería de fotos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-nav">
+                                <p class="elemento-navegacion align-right extra-margin-right despliega-sobreIKEA">Sobre IKEA<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
+                                <div class="sobreIKEA">
+                                    <div class="row">
+                                        <div class="col-op-50">
+                                            <a href="/ms/es_ES/customer-service/index.html" class="elemento-desplegable-navegacion">Atención al cliente</a>
+                                            <a href="/ms/es_ES/customer-service/about-shopping/catalogue-and-brochures/index.html" class="elemento-desplegable-navegacion">Catálogos</a>
+                                            <a href="/ms/es_ES/this-is-ikea/index.html" class="elemento-desplegable-navegacion">Esto es IKEA</a>
+                                            <a href="https://www.ikeafoundation.org/" class="elemento-desplegable-navegacion">Fundación IKEA</a>
+                                            <a href="/ms/es_ES/apps/mobileApps.html" class="elemento-desplegable-navegacion">IKEA apps</a>
+                                            <a href="/es/es/business/business_new/ikea_business.html" class="elemento-desplegable-navegacion">IKEA BUSINESS</a>
+                                            <a href="https://www.family.ikea.es/mapa/" class="elemento-desplegable-navegacion">IKEA FAMILY</a>
+                                            <a href="https://ikeamuseum.com/en/" class="elemento-desplegable-navegacion">Museo IKEA</a>
+                                        </div>
+                                        <div class="col-op-50">
+                                            <a href="/ms/es_ES/this-is-ikea/people-and-planet/index.html" class="elemento-desplegable-navegacion">Personas + Planeta</a>
+                                            <a href="/ms/es_ES/customer-service/about-our-products/planning-tools/index.html" class="elemento-desplegable-navegacion">Planificadores</a>
+                                            <a href="/es/es/catalog/categories/departments/food/#restaurante" class="elemento-desplegable-navegacion">Restaurante</a>
+                                            <a href="/ms/es_ES/about_ikea/prensa/index.html" class="elemento-desplegable-navegacion">Sala de prensa</a>
+                                            <a href="/ms/es_ES/customer-service/about-services/secure-it/index.html" class="elemento-desplegable-navegacion">Seguridad</a>
+                                            <a href="/ms/es_ES/customer-service/about-services/index.html" class="elemento-desplegable-navegacion">Servicios</a>
+                                            <a href="/ms/es_ES/campaigns/elige-tu-tienda/" class="elemento-desplegable-navegacion">Tiendas</a>
+                                            <a href="/ms/es_ES/this-is-ikea/working-at-the-ikea-group/index.html" class="elemento-desplegable-navegacion">Trabaja en IKEA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="separador-barra-buscador">
+                    </div>
+                <!--BARRA NAVEGACION-->
+                <!--SCRIPTS-->  
+                    <script>
+                        pintar();
+                    </script>        
+                <!--SCRIPTS-->
+            </div>
+        <!--DESKTOP & TABLET-->
+
+        <!--MOVIL-->
+            <div class="hidden-md hidden-lg">
+                <!--BARRA TOP MOBILE-->
+                    <form id="myAccount" action="/webapp/wcs/stores/servlet/LogonForm" method="get">
+                        <div>
+                            <input type="hidden" name="storeId" value="11" />
+                            <input type="hidden" name="langId" value="-5" />
+                            <input type="hidden" name="catalogId" value="11001" />
+                        </div>
+                    </form>
+                    <div class="top-mobile" id="top">
+                        <a href="/es/es/" class="enlace-logo-movil">
+                            <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/logo.png" class="img-responsive logo-movil">
+                        </a>
+                        <a href="https://m.ikea.com/es/es/shoppinglist/">
+                            <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/shopping-cart.png" class="movil-carrito">
+                        </a>           
+                        <a class="dropdown-toggle show-elements-mobile" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/lupa.png" class="movil-lupa">
+                        </a>
+                        <ul class="dropdown-menu dropdown-buscador" aria-labelledby="dropdownMenu2">
+                            <li class="dropdown">
+                                <form class="navbar-form navbar-left buscadorNav-small" action="https://m.ikea.com/es/es/search/" method="get" id="searchForm" onsubmit="return checkSearch(this)">
+                                    <div class="form-group buscadorForm">
+                                        <input type="text" class="form-control buscador" value name="query" autocomplete="off">
+                                        <button id="lnkSearchBtnHeader" type="submit" class="btn-buscar-movil" style="float:right;">›</button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                <!--BARRA TOP MOBILE-->
+                <!--BARRA NAVEGACION-->
+                    <div class="navbar-header top-navegacion-movil">
+                        <div>
+                            <div>
+                                <div class="elemento-barra-navegacion-movil extra-margin-left-movil productos-mvl dropdown-toggle" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</div>
+                                <ul class="dropdown-menu dropdown-productos" aria-labelledby="dropdownMenu2">
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/camas_colchones/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/camas_colchones_camas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Camas y colchones</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/muebles/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/muebles/vn_mueblesarmarios/salon_estanterias.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Muebles, armarios y estanterías</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/sofas_sillones/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/sofasysillones_sofas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Sofás y sillones</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/mesas_sillas/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/mesas_sillas/vn_mesasysillas/mesassillasseries.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Mesas y sillas</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/textiles/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/textiles_fundasdecojin.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Textiles</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/decoracion/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/decoracion_accesoriosdecorativos.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil simple">Decoración y espejos</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/iluminacion/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/iluminacion_basespantallasycables.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil simple">Iluminación</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/menaje_ollas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Menaje y utensilios de cocina</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/cocinar/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/vajillas_copas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Vajilla, cristalería y cubertería</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/electrodomesticos/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/cocinas_electrodomesticos.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Electrodomésticos</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/home_electronics" class="enlace-desplegables-movil">
+                                        <img src="https://www.ikea.com/ms/es_ES/img/taxonomia/visual_nav/cargadores_inalambricos.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Tecnología y accesorios</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/lavabos_fregaderos/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/lavabos_fregaderos/vn_lavabos/lavabos_grifo.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil simple">Lavabos, fregaderos y grifería</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/almacenaje_pequeno/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/complementosalmacenaje_ropa.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil doble">Organización y accesorios de almacenaje</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/juguetes/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/juguetes/vn_juguetes/juguetes_roles.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Juguetes</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/ocio/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/ocio_bicicletas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Ocio</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/seguridad/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/seguridad/vn_seguridad/seguridad_hogar.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Seguridad</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/catalog/functional/10378/16292/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/bricolaje/vn_bricolaje/bricolaje_herramientas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Bricolaje</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/suelos/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/suelos/vn_suelos/suelos_exterior.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Suelos</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/plantas_cultivos/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/campaigns/plantas_cultivos/vn_plantas/decoracion_plantasymaceteros.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil simple">Plantas, cultivos y jardinería</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/catalog/functional/10914/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/alimentacion_carne.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Tienda sueca</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="elemento-barra-navegacion-movil estancias-mvl dropdown-toggle" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estancias</div>
+                                <ul class="dropdown-menu dropdown-estancias" aria-labelledby="dropdownMenu3">
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/dormitorios/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/camas_colchones_camas.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Dormitorio</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/salones/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/salones_series.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Salón</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/comedor/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/mesas_juegoscomedor.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Comedor</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/recibidor/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/serie-recibidor.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Recibidor</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/espacios_trabajo/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/mesas_mesasymesasdeordenador.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil simple">Espacios de trabajo</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/ninos/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/ninos_3_7.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Niños</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/cocinas/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/cocinas_electrodomesticos.jpg" class="img-productos-movil medio-larga">
+                                        <p class="elemento-desplegables-movil simple">Cocina</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/banos/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/banos_muebles.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Baño</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/almacenaje_secundario/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/series-trastero.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Trastero</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/lavar_planchar/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/electros_lavadoras.jpg" class="img-productos-movil extra-larga">
+                                        <p class="elemento-desplegables-movil simple">Lavadero</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/terraza_jardin/" class="enlace-desplegables-movil">
+                                        <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/exterior_series.jpg" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Terraza y jardín</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="elemento-barra-navegacion-movil novedades-mvl dropdown-toggle" role="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Novedades</div>
+                                <ul class="dropdown-menu dropdown-novedades" aria-labelledby="dropdownMenu4">
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/novedades/index.html" class="enlace-desplegables-movil">
+                                        <img src="/ms/es_ES/img/novedades_header.png" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Todas las novedades</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                    <a href="https://www.ikea.com/ms/es_ES/campaigns/precios_bajos/index.html" class="enlace-desplegables-movil">
+                                        <img src="https://www.ikea.com/ms/img/nlp/es_ES/nlp_02.png" class="img-productos-movil">
+                                        <p class="elemento-desplegables-movil simple">Hemos bajado el precio</p>
+                                        <span class="flecha-btn-movil">›</span>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="elemento-barra-navegacion-movil promociones-mvl">
+                                <a href="/ms/es_ES/campaigns/ofertas-y-promociones.html" class="enlace-elementos-navegacion">Promociones</a>
+                            </div>
+                            <div class="elemento-barra-navegacion-movil tiendas-mvl">
+                                <a href="/ms/es_ES/campaigns/elige-tu-tienda/" class="enlace-elementos-navegacion">Tiendas</a>
+                            </div>
+                            <div class="elemento-barra-navegacion-movil conecta-mvl">
+                                <a href="https://securem.ikea.com/es/es/login/" class="enlace-elementos-navegacion">Conectar</a>
+                            </div>
+                        </div>
+                        <button type="button" class="navbar-toggle navbar-right btn-menu-movil" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <hr class="separador-top-movil">
+                <!--BARRA NAVEGACION-->
+                <!--DESPLEGABLE-->
+                    <div class="collapse navbar-collapse desplegable-lateral" id="bs-example-navbar-collapse-1">
+                        <div class="novedades-mvl-desplegable">
+                            <p class="elemento-desplegables-movil-internos dropdown-toggle" role="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Novedades
+                                <img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-desplegar-interna">
+                            </p>
+                            <ul class="dropdown-menu dropdown-novedades-interno" aria-labelledby="dropdownMenu5">
+                                <a href="https://www.ikea.com/ms/es_ES/campaigns/novedades/index.html" class="enlace-desplegables-movil">
+                                    <img src="/ms/es_ES/img/novedades_header.png" class="img-productos-movil">
+                                    <p class="elemento-desplegables-movil simple">Todas las novedades</p>
+                                    <span class="flecha-btn-movil">›</span>
+                                </a>
+                                <a href="https://www.ikea.com/ms/es_ES/campaigns/precios_bajos/index.html" class="enlace-desplegables-movil">
+                                    <img src="https://www.ikea.com/ms/img/nlp/es_ES/nlp_02.png" class="img-productos-movil">
+                                    <p class="elemento-desplegables-movil simple">Hemos bajado el precio</p>
+                                    <span class="flecha-btn-movil">›</span>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="promociones-mvl-desplegable">
+                            <a href="/ms/es_ES/campaigns/ofertas-y-promociones.html" class="enlace-elementos-navegacion">
+                                <p class="elemento-desplegables-movil-internos">Promociones</p>
+                            </a>
+                        </div>
+                        <div class="tiendas-mvl-desplegable">
+                            <a href="/ms/es_ES/campaigns/elige-tu-tienda/" class="enlace-elementos-navegacion">
+                                <p class="elemento-desplegables-movil-internos">Tiendas</p>
+                            </a>
+                        </div>
+                        <div class="conecta-mvl-desplegable">
+                            <a href="https://securem.ikea.com/es/es/login/" class="enlace-elementos-navegacion">
+                                <p class="elemento-desplegables-movil-internos conectar-desplegable">Conectar</p>
+                            </a>
+                        </div>
+                    </div>
+                <!--DESPLEGABLE-->
+            </div>
+        <!--MOVIL-->
+
+     
