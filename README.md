@@ -19,3 +19,10 @@ description: a folder for each version of header and footer that we are using:
 [es_campaigns, es_footer, es_header_cr, es_header, es_header_vista, en_campaigns, en_footer, en_header_cr, en_header, en_header_vista]
 inside of each folder you will find the html files.
 *********************************************************************************************************************************
+
+*********************************************************************************************************************************
+TOOLS_TESTING ((BETA VERSION))
+date creation: 30/01/2018
+user: migandr
+description: files with scripts and css that IKEA.es loads. Will help us to develop from local with a 'more' definitive version.
+********************************************************************************************************************************* 
