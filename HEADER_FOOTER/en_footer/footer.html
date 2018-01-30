@@ -10,6 +10,8 @@
     .row-for-8{float:left; width:12.5%}
     .row-for-10{float:left; width: 10%}
     .row-for-12{float:left; width: 8.3%}
+    .row-for-mid-pay{float: left; width: 40%}
+    .row-for-side-pay{float: left; width: 30%}
     .row-for-search{float:left; width: 70.9%}
     .row-for-rooms{float: left; width: 37.5%}
     .row-for-rrss{float: left; width: 50%;}
@@ -28,6 +30,9 @@
     .footer-enlaces{text-align: center; font-size: 12px; height: 80px}
     .enlace-footer{color: darkgrey !important; text-decoration: none !important; display: block; top: 15px; position: relative; margin-bottom: 20px}
     .enlace-footer:hover{text-decoration: underline !important; color:darkgrey !important;}
+    .footer-metodos-de-pago{font-size: 12px; height: 50px;}
+    .img-metodo-pago{width: 15%; margin-top: 16px; margin-right: 15px;}
+    .elemento-metodo-pago{color: darkgrey !important; text-decoration: none !important; display: block; top: 15px; position: relative; margin-bottom: 20px; margin-top: 8px;}
     .footer-legal{font-size: 10px; color: darkgrey !important; height:30px}
     .footer-legal-izquierdo{float:left;}
     .footer-legal-derecho{float:right;}
@@ -36,6 +41,7 @@
     @-moz-document url-prefix(){
         .enlace-footer{margin-bottom: 25px}
         .separador-footer{margin-top: 24px !important;}
+        .elemento-metodo-pago{margin-bottom: 25px}
     }             
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         .footer{margin-top: 200px;}
@@ -145,6 +151,25 @@
         </div>
         <div class="row-for-6">
             <a href="/ms/en_ES/service-offer/ikea-donde-esta-mi-pedido.html" class="enlace-footer">Where is my order?</a>
+        </div>
+    </div>
+    <hr class="separador-footer">
+    <div class="footer-metodos-de-pago">
+        <div class="row-for-side-pay">
+            <p></p>
+        </div>
+        <div class="row-for-mid-pay">
+            <div class="row-for-2">
+                <p class="elemento-metodo-pago">Online payment methods</p>
+            </div>
+            <div class="row-for-2">
+                <img src="https://www.ikea.com/ms/es_ES/img/metodos_de_pago/visa.png" class="img-metodo-pago" alt="">
+                <img src="https://www.ikea.com/ms/es_ES/img/metodos_de_pago/mastercard.png" class="img-metodo-pago" alt="">
+                <img src="https://www.ikea.com/ms/es_ES/img/metodos_de_pago/paypal.png" class="img-metodo-pago" alt="">
+            </div>
+        </div>
+        <div class="row-for-side-pay">
+            <p></p>
         </div>
     </div>
     <hr class="separador-footer">
