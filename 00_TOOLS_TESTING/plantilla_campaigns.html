@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width, target-densitydpi=device-dpi, minimal-ui">
+        <meta name="title" content="" />
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title></title>
+
+        <!--BOOTSTRAP CSS-->
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/css/bootstrap/bootstrap.min.css"/>
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/css/bootstrap/bootstrap-theme.min.css"/>
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/css/carousel.css"/>
+        <!--BOOTSTRAP CSS-->
+
+        <!--TMPLT CSS-->
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/css/tmplt.min.css"/>   
+        <!--TMPLT CSS-->
+
+        <!--CAMPAIGN CSS-->
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/dist/style.css" />
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/css/tmplt_headerfooter.css" />	
+            <!--<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />--> 
+            <script language="JavaScript" src="/ms/es_ES/campaigns/new/js/js_main.js" type="text/javascript"></script> 
+            <script type="text/javascript" src="/ms/es_ES/campaigns/new/js\vendor\jquery\jquery-1.9.1.min.js"></script>
+            <link rel="stylesheet" href="/ms/es_ES/campaigns/new/dist/styles_gallery.css" type="text/css" />
+            <script type="text/javascript" src="/ms/es_ES/campaigns/new/js/vendor/bootstrap/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="/ms/es_ES/css/taxonomia_mobile.css"/>
+        <!--CAMPAIGN CSS-->
+
+        <!--IDIOMAS-->
+            <script language="JavaScript" src="/ms/es_ES/campaigns/new/js/js_main.js" type="text/javascript"></script> 
+            <script language="JavaScript" src="/ms/es_ES/js/navOptions.js" type="text/javascript"></script>
+            <script language="JavaScript" src="/ms/js/languageSelector.js" type="text/javascript" onload="return setSrcUrl(); function setSrcUrl(){MP.SrcUrl=decodeURIComponent('mp_js_orgin_url');}"></script>
+        <!--IDIOMAS-->
+
+        <!--INCLUDE-->
+            <script src="/ms/es_ES/campaigns/general/js/w3.js"></script>
+        <!--INCLUDE-->
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script class="img-responsive" src="//oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script>window.html5 || document.write('<script class="img-responsive" src="js/vendor/html5shiv/html5shiv.js"><\/script>')</script>
+            <script class="img-responsive" src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <script>window.respond || document.write('<script class="img-responsive" src="js/vendor/respond/respond.min.js"><\/script>')</script>
+	    <![endif]-->
+    </head>
+    <body>
+        <!--SCRIPT UTAL PROPORCIONADO POR ANALISTA-->
+
+        <!--SCRIPT UTAL PROPORCIONADO POR ANALISTA-->
+
+        <!-- HEADER -->  
+            <div w3-include-html="/ms/es_ES/campaigns/header_footer/header.html"></div>
+            <script src="/ms/es_ES/campaigns/new/js/new_breadcrumbs_IKEA_ES.js"></script>
+            <script>
+               pintar();
+            </script>
+        <!-- HEADER -->
+
+        <!--BODY HERE-->
+
+
+
+        <!--END BODY HERE-->
+
+        <!-- FOOTER -->
+            <div w3-include-html="/ms/es_ES/campaigns/header_footer/footer.html"></div>
+            <script>
+                w3.includeHTML();
+            </script>
+        <!-- FOOTER -->
+
+        <!--SCRIPT LANGUAGE TO ENGLISH-->
+            <script>
+            //ES/CA/EU TO EN
+                function changeLanguage(){
+                    var from = document.location.href.split("/");
+                    var to = from[0];
+                    if(from[4]=="ca"||from[4]=="eu"){
+                        from[2]="www.ikea.com";
+                        from[4]="en";
+                        for (var i = 1; i < from.length; i++) {
+                            to+="/"+from[i]
+                        };
+                    }
+                    else if(from[4]=="es_ES"){
+                        from[4]="en_ES";
+                        for (var i = 1; i < from.length; i++) {
+                            to+="/"+from[i]
+                        };
+                    }
+                    else{
+                        from[4]="en";
+                        for (var i = 1; i < from.length; i++) {
+                            to+="/"+from[i]
+                        };
+                    };	
+                    document.location.href = to;
+                };
+            </script>
+        <!--SCRIPT LANGUAGE TO ENGLISH-->
+        <!-- MAXIMYSER -->
+            <script src="//tags.tiqcdn.com/utag/ikea/es-main/prod/utag.sync.js"></script><script type="text/javascript" src="//service.maxymiser.net/api/eu/ikea.es/eb8261/mmapi.js"></script>
+        <!-- MAXIMYSER -->
+        <!--IPLUGINS-->
+            <script id="iplugins-implementation-tag" type="text/javascript" src="https://ww8.ikea.com/ext/iplugins/implement.js" data-account="es_ES"></script>
+        <!--IPLUGINS-->
+    </body>
+</html>

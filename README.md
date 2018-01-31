@@ -25,4 +25,5 @@ TOOLS_TESTING ((BETA VERSION))
 date creation: 30/01/2018
 user: migandr
 description: files with scripts and css that IKEA.es loads. Will help us to develop from local with a 'more' definitive version.
+             campaigns_template that must be the base for every design that we made at campaigns.
 ********************************************************************************************************************************* 
