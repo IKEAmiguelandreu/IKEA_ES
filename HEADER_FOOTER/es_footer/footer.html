@@ -464,7 +464,7 @@
             <!--COOKIES-->
             <script>
                 /*VAR DECLARATION*/
-                var c_val, ca, cc, cname, cvalue, d, expires, url_switch, preferedID, preferedID_text, preferedID_url, cookie_Check, addAlign, marco, urlMarco, domain;
+                var c_val, ca, cc, cname, cvalue, d, expires, url_switch, preferedID, preferedID_text, preferedID_url, cookie_Check, addAlign, marco, urlMarco;
 
                 /*SET COOKIE IF YOU NEED TO MODIFY IT*/
                 function setCookie() {
@@ -475,7 +475,6 @@
                         expires = "expires="+d.toUTCString();
                         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
                     }
-
 
                 /*EVENT HANDLE, MAIN FUNCTION THAT DISTRIBUTES make CALL TO IT*/
                 function getCookie(){
