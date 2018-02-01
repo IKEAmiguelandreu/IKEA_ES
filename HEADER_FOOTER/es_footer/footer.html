@@ -473,8 +473,7 @@
                         d = new Date();
                         d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
                         expires = "expires="+d.toUTCString();
-                        domain ="www.ikea.com";
-                        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; domain="+domain;
+                        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
                     }
 
 
@@ -585,8 +584,7 @@
                                 d = new Date();
                                 d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
                                 expires = "expires="+d.toUTCString();
-                                domain ="www.ikea.com";
-                                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; domain="+domain;
+                                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
                             }
                             else if(islands_url=="//www.baleares.ikea.es/?switch"){
                                 cname = "locationPreference";
@@ -594,8 +592,7 @@
                                 d = new Date();
                                 d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
                                 expires = "expires="+d.toUTCString();
-                                domain ="www.ikea.com";
-                                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; domain="+domain;
+                                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
                             }
                         }
                         else{}
