@@ -370,38 +370,7 @@
                                     </a>
                                     <div class="menu-login">
                                         <div id="loginFormFunction">
-                                            <p class="inner-text">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p>
-                                            <p class="parrafo-btn-incia-sesion">
-                                                <a href="javascript:logonLink();" rel="nofollow" class="btn-IniciaSesion">Inicia Sesión</a>
-                                            </p>
-                                            <hr class="hr-login"><p style="text-align:center; font-size:0.8em;">¿No tienes cuenta? <a href="" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>
-                                        </div>
-                                        <script type="text/javascript">
-                                            //<![CDATA[
-                                            var storeId = "11";
-                                            var userInfo = getUserInfo('11','normal');
-                                            updateWelcomeText();
-                                            document.observe('dom:loaded', function(){
-                                                userInfo = getUserInfo('11');                            
-                                                updateNoOfCartItems('11');
-                                                generateScLinkListener('11');
-                                            });
-                                            function updateWelcomeText(){
-                                                var userLoggedIn = '<p style="text-align:center; margin-top:1em;margin-bottom:2em; margin-left: 1em; margin-right: 1em; font-size:12px">¡Hola {title} {firstname} {lastname}!</p><p style="text-align:center; font-size: 11px; margin-top: 2em;">Accede a tu <a href="https://secure.ikea.com/webapp/wcs/stores/servlet/MyProfile?langId=-5&amp;storeId=11">área personal.</a></p><p style="text-align:center; font-size: 11px; margin-top: 2em;"><a href="/ms/es_ES/service-offer/ikea-donde-esta-mi-pedido.html">¿Dónde está mi pedido?</a></p><hr><p style="text-align:center; font-size: 11px">¿No eres {firstname}?<a href="/webapp/wcs/stores/servlet/Logoff?langId=-5&amp;storeId=11&amp;forgetMe=true" rel="nofollow"> Haz clic aquí</a></p>';
-                                                var userNotLoggedIn = '<p style="text-align:center; margin-top:1em;margin-bottom:2em;">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p><a href="javascript:logonLink();" class="btn-IniciaSesion" rel="nofollow">Inicia Sesión</a><hr class="hr-login"><p style="text-align:center; font-size:0.8em;">¿No tienes cuenta? <a href="" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>';
-                                                if(userInfo != null && userInfo.firstName != "" && userInfo.firstName != ""){
-                                                    userLoggedIn = userLoggedIn.replace(/{firstname}/g,userInfo.firstName.escapeHTML());
-                                                    userLoggedIn = userLoggedIn.replace(/{lastname}/g,userInfo.lastName.escapeHTML());
-                                                    userLoggedIn = userLoggedIn.replace(/{title}/g,userInfo.title.escapeHTML());
-                                                    document.getElementById("loginFormFunction").innerHTML = userLoggedIn;
-                                                    document.getElementById("login-ico").style.filter = "none";
-                                                }
-                                                else{
-                                                    document.getElementById("loginFormFunction").innerHTML = userNotLoggedIn;
-                                                }
-                                            };
-                                            //]]>
-                                        </script>
+                                        </div>                                        
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
