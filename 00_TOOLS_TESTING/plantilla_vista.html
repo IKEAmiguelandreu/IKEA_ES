@@ -1,0 +1,101 @@
+<!--IDIOMAS-->
+    <script language="JavaScript" src="https://www.ikea.com/ms/js/languageSelector.js" type="text/javascript" onload="return setSrcUrl(); function setSrcUrl(){MP.SrcUrl=decodeURIComponent('mp_js_orgin_url');}"></script>
+<!--IDIOMAS-->
+<!--INCLUDE-->
+    <script src="https://www.ikea.com/ms/es_ES/campaigns/general/js/w3.js"></script>
+<!--INCLUDE-->
+<!--TEALIUM-->
+<script type="text/javascript">
+    // part in bold should be configurable in settings per market
+     (function(a, b, c, d) {
+        a = '//tags.tiqcdn.com/utag/ikea/es-main/prod/utag.js';
+        b = document;
+        c = 'script';
+        d = b.createElement(c);
+        d.src = a;
+        d.type = 'text/java' + c;
+        d.async = true;
+        a = b.getElementsByTagName(c)[0];
+        a.parentNode.insertBefore(d, a);
+        })();
+</script>
+<!--TEALIUM-->
+
+<!-- HEADER -->  
+    <div w3-include-html="https://www.ikea.com/ms/es_ES/campaigns/vista_header/header_vista.html"></div>
+    <script src="https://www.ikea.com/ms/es_ES/campaigns/new/js/new_breadcrumbs_IKEA_ES.js"></script>
+    <script>
+        pintar();
+    </script>
+<!-- HEADER -->
+
+
+
+
+
+ <!-- FOOTER -->
+    <div w3-include-html="https://www.ikea.com/ms/es_ES/campaigns/header_footer/footer.html"></div>
+    <script>
+        w3.includeHTML();
+    </script>
+<!-- FOOTER -->
+
+<!--LOGIN-->
+<script type="text/javascript">
+    //<![CDATA[
+    var storeId = "11";
+    var userInfo = getUserInfo('11','normal');                                              
+    document.observe('dom:loaded', function(){
+        userInfo = getUserInfo('11');
+        updateWelcomeText();
+        updateNoOfCartItems('11');
+        generateScLinkListener('11');
+    });
+    function updateWelcomeText(){
+        var userLoggedIn = '<p style="text-align:center;margin-top:1em;margin-bottom: 0em;margin-left: 1em;margin-right: 1em;font-size:12px;">¡Hola {title} {firstname} {lastname}!</p><p style="text-align:center; font-size: 11px; margin-top: 2em;">Accede a tu <a style="padding-top: 0em; font-size: 11px !important;" href="https://secure.ikea.com/webapp/wcs/stores/servlet/MyProfile?langId=-5&amp;storeId=11">área personal.</a></p><p style="margin-bottom: 0px; margin-top: 0px;text-align:center;"><a style="text-align:center;font-size: 11px;margin-top: -2em;" href="/ms/es_ES/service-offer/ikea-donde-esta-mi-pedido.html">¿Dónde está mi pedido?</a></p><hr><p style="text-align:center; font-size: 11px"><a style="text-align:center; font-size: 11px" href="/webapp/wcs/stores/servlet/Logoff?langId=-5&amp;storeId=11&amp;forgetMe=true" rel="nofollow">Cerrar sesión</a></p>';
+        var userNotLoggedIn = '<p style="text-align:center;margin-top:1em;margin-bottom:1em;font-size: 12px;">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p><p style="text-align:center; font-size: 12px !important;"><a href="javascript:logonLink();" class="btn-IniciaSesion" rel="nofollow">Inicia Sesión</a></p><hr class="hr-login"><p style="text-align:center; font-size: 12px;">¿No tienes cuenta?<br><br><a href="javascript:logonLink();" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>';
+        if(userInfo != null && userInfo.firstName != "" && userInfo.firstName != ""){
+            userLoggedIn = userLoggedIn.replace(/{firstname}/g,userInfo.firstName.escapeHTML());
+            userLoggedIn = userLoggedIn.replace(/{lastname}/g,userInfo.lastName.escapeHTML());
+            userLoggedIn = userLoggedIn.replace(/{title}/g,userInfo.title.escapeHTML());
+            document.getElementById("loginFormFunction").innerHTML = userLoggedIn;
+            document.getElementById("login-ico").style.filter = "none";     
+        }
+        else{
+            document.getElementById("loginFormFunction").innerHTML = userNotLoggedIn;
+            document.getElementById("login-ico").style.filter = "filter: grayscale(100%);"; 
+        }
+    };
+    //]]>
+</script>
+<!--LOGIN-->
+
+<!--SCRIPT LANGUAGE TO ENGLISH-->
+<script>
+//ES/CA/EU TO EN
+    function changeLanguage(){
+        var from = document.location.href.split("/");
+        var to = from[0];
+        if(from[4]=="ca"||from[4]=="eu"){
+            from[2]="www.ikea.com";
+            from[4]="en";
+            for (var i = 1; i < from.length; i++) {
+                to+="/"+from[i]
+            };
+        }
+        else if(from[4]=="es_ES"){
+            from[4]="en_ES";
+            for (var i = 1; i < from.length; i++) {
+                to+="/"+from[i]
+            };
+        }
+        else{
+            from[4]="en";
+            for (var i = 1; i < from.length; i++) {
+                to+="/"+from[i]
+            };
+        };	
+        document.location.href = to;
+    };
+</script>
+<!--SCRIPT LANGUAGE TO ENGLISH-->
