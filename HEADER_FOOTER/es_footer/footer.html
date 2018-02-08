@@ -1,6 +1,6 @@
 
  <!--FOOTER-->
-            <style>
+ <style>
                 body{font-family: Verdana;}
                 /*ROWS*/
                 .row-for-1{float:left; width: 100%}
@@ -23,7 +23,6 @@
                 .top-compra-online-right{text-align: right; right: 42px; display: block; position: relative;}
                 .extra{margin-bottom:0px !important}
                 /*ALIGNS*/
-                /*FOOTER*/
                 .footer{width: 1060px; height: 200px; margin-top:50px}
                 .separador-footer{border: 0; width: 100%; height: 1px; color: #ccc; background-color: #ccc; top: 5px; position: relative; margin-top: 6px !important;}
                 .footer-redes-sociales{height: 36px; margin-top: 20px;}
@@ -51,7 +50,6 @@
                 @supports (-ms-accelerator:true) {
                     .footer{margin-top: 200px;}
                 }
-                /*FOOTER*/
             </style>
              <!--[if IE]>
                 <style type="text/css">
@@ -187,422 +185,566 @@
                     </div>
                 </div>
             </div>
-            <!--SCRIPTS-->
-
-            <!--SHOPPING LIST / PAIN POINTS Y REDISEÑO-->
-            <div id="script"></div>
-            <script type="text/javascript">
-                if(document.getElementById("shoppingList")!=null){
-                    var tag = document.createElement('script');
-                    tag.src = "//behtar.loyaltypoint.pl/GenerateScript/D089C758-B46F-432C-9F8E-5018A18435CF";
-                    tag.setAttribute('async','');
-                    document.getElementById('script').appendChild(tag);
-                    document.getElementById("btnContainerTop").style.display = "none";
-                    setTimeout(function(){
-                        document.getElementById("deliveryHeader").style.display = "none";
-                        if(document.getElementById("cc-buy-online-button")){
-                            var p1 = document.getElementById("anonymous_element_2");
-                            var p2 = p1.getElementsByTagName("td")[1];
-                            var p3 = p2.getElementsByTagName("div")[0];
-                            p2.removeChild(p3);
-                            var d = document.createElement("div");
-                            var a = document.createElement("a");
-                            a.href = "https://www.ikea.com/es/es/";
-                            a.id = "lnkContShopTotal";
-                            a.className = "btnSeguirComprando";
-                            var pa = document.createTextNode("Seguir comprando");
-                            a.appendChild(pa);					
-                            d.appendChild(a);
-                            var e = document.getElementsByClassName("clickCollectButton")[0];    
-                            e.insertBefore(d, e.childNodes[0]);
-                        }
-                    },2000);
-                }
-            </script>
-            <!--SHOPPING LIST / PAIN POINTS Y REDISEÑO-->
-
-            <!--CERRAR COOKIES-->
-            <style>
-                .btn-cerrar{float: right; width:100px; height:25px; color:black; background-color:transparent; box-shadow: none !important; border:none !important; font-size:11px; 
-                font-family: verdana; margin-top:2px; margin-left:2px; font-weight: bold;}
-                .btn-cerrar:hover{font-weight: normal;}
-            </style>
-            <script type="text/javascript">
-                setTimeout(function(){
-                    if (document.getElementById("cookies_legislation")!=null){
-                        var btn;
-                        btn = document.createElement("button");
-                        btn.id = "cerrar";
-                        btn.className = "btn-cerrar";
-                        document.getElementById("cookies_legislation").insertBefore(btn, document.getElementById("cookies_legislation").firstChild);
-                        document.getElementById("cerrar").innerHTML = "X";
-                    }
-                    if (document.getElementById("cerrar")){
-                        document.getElementById("cerrar").onclick = function(){
-                            document.getElementById("cookieMsgBlock").style.display ="none";
-                        }
-                    }
-                }, 1500);
-            </script>
-            <!--CERRAR COOKIES-->
-
-            <!--BORRAR BREADCRUMBS-->
-            <script type="text/javascript">
-                if(document.getElementById("breadCrumbNew")!=null){
-                    document.getElementById("main").removeChild(document.getElementById("breadCrumbNew"));
-                    document.getElementById("main").removeChild(document.getElementsByClassName("departmentLinkBlock")[0]);
-                }
-            </script>
-            <!--BORRAR BREADCRUMBS-->
-
-            <!--MODIFICAR TODOS LOS PRODUCTOS-->
-            <script type="text/javascript">
-                var c = document.location.href.split("/");
-                if(c[6]=="allproducts"){
-                    var d = document.createElement("div");
-                    d.id = "containerProducts";
-                    var a = document.createElement("a");
-                    a.href = "/es/es/catalog/productsaz/0/";
-                    a.id = "products";
-                    document.getElementsByClassName("paginationPadding")[0].appendChild(d);
-                    document.getElementById("containerProducts").appendChild(a);
-                    document.getElementById("products").innerHTML = "Encontrar productos por nombre ›";
-                    var sheet = (function() {
-                        var style = document.createElement("style");
-                        style.appendChild(document.createTextNode(""));
-                        document.head.appendChild(style);
-                        return style.sheet;})();                
-                    sheet.insertRule("#allProductsMain { width: 1060px !important; }", 0);
-                    sheet.insertRule("#allProductsNavigation { display: none !important; }", 0);
-                    sheet.insertRule("#allProductsContainer { width: 1060px !important; height: 60px !important;}", 0);
-                    sheet.insertRule(".rightContent .paginationContainerNoTopMargin { height: 60px; width: 1060px !important; background: none !important; border-left: none; border-bottom: solid thin lightgrey; border-top: solid thin lightgrey; float:right;}", 0);
-                    sheet.insertRule("#products {font-family: Verdana; color: black !important; font-size: 1.15em;; display: block; font-weight: bold; margin-top: 2px; margin-left:10px;}", 0);
-                    sheet.insertRule(".paginationLeft {float: right !important; color: black !important; display: block; font-weight: bold; margin-right: 32px; margin-bottom: 10px}", 0);
-                    sheet.insertRule("#txtMainHdr {margin-top: 10px;  font-size: 22px;}", 0);
-                    sheet.insertRule(".productCategoryContainer {width: 25em !important}", 0);
-                    sheet.insertRule(".productsHeaderContainer {margin-bottom: 10px !important;}", 0);
-                    document.getElementsByClassName("paginationPadding")[0].style.float ="right";
-                    sheet.insertRule(".containerProducts {display: block; margin-top:30px !important; margin-left: 10px;}", 0);
-                    var c = document.getElementsByClassName("productCategoryDivider");
-                    for (var i =0; i<c.length; i++){
-                        document.getElementsByClassName("productCategoryDivider")[i].style.width ="26em";
-                    }	
-                    sheet.insertRule(".textContainer {font-size: 10px !important; color: black !important;}", 0);
-                    sheet.insertRule(".textContainer a{color: black !important; margin-bottom: 8px;}", 0);
-                    sheet.insertRule(".header {color: black !important; font-size: 12px !important;}", 0);
-                }
-            </script>
-            <!--MODIFICAR TODOS LOS PRODUCTOS-->            
-            
-            <!--MINIBOX-->
-            <link rel="stylesheet" href="https://www.ikea.com/ms/es_ES/css/mb.css" type="text/css">
-            <script>	
-                var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-                var isIE = /*@cc_on!@*/false || !!document.documentMode;
-                var isEdge = !isIE && !!window.StyleMedia;
-                var href = document.location.href.split("/");
-                var texto; var enlace; var arrayData; var show; var control;
-            
-                function loadMinibox(){
-                    if(href.length>8){
-                        if(href[8]=="bedroom" || href[8]=="living_room" || href[8]=="dining"){
-                            arrayData = campos();
-                            texto = arrayData[0];
-                            enlace = arrayData[1];
-                            if(texto!=0 || enlace!=0){
-                                crearMiniBox();	
-                                setTimeout(function(){
-                                    if(window.innerWidth>1330){
-                                        show = 0;
-                                        actionFunction();
-                                        document.getElementById("miniBox").style.display ="block";
-                                    }
-                                    else{
-                                        show = 1;
-                                        actionFunction();
-                                    }	
-                                    document.getElementById("actionClose").style.display="block";					
-                                },1500);				
-                            }else{
-                                control = 0;
-                            }
-                        }else{
-                            control=0;
-                        }
-                    }
-                }
-                
-                
-                if(isIE || isEdge){            
-                }else{
-                    loadMinibox();
-                    if(control!=0){
-                        window.addEventListener("resize", myFunction);
-                        document.getElementById("actionClose").addEventListener("click", actionFunction);
-                    }
-                }            
-                
-                var w;
-                var x = 0;
-                function myFunction() {
-                    w = x = window.innerWidth;
-                    mostrar();
-                }
-                
-                function mostrar(){
-                    if(w<=1330){
-                        show = 1;
-                        actionFunction();
-                    }
-                    else{
-                        show = 0;
-                        actionFunction();
-                    }
-                }
-            
-                function campos(){
-                    if(href[9]=="16284"||href[9]=="16285"||href[9]=="19037"||href[9]=="25205"){
-                        return["¿Te ayudamos a diseñar tu dormitorio?","https://www.ikea.com/ms/es_ES/campaigns/dormitorios/servicios-diseno-reforma.html?icid=a1:iba|a2:es|a3:quieres diseñar|a4:diseña_armario|a7:ikea|a9:ver mas armarios|cc:216"];
-                    }
-                    else if(href[9]=="19053"||href[9]=="29879"||href[9]=="19110-2"||href[9]=="19106-2"||href[9]=="20087-2"||href[9]=="19112-2"||href[9]=="40206-2"||href[9]=="19115-2"){
-                        return["¿Te ayudamos a diseñar tu armario?","https://www.ikea.com/ms/es_ES/campaigns/dormitorios/servicios-diseno-reforma.html?icid=a1:iba|a2:es|a3:quieres diseñar|a4:diseña_dormitorio|a7:ikea|a9:ver mas dormitorios|cc:216"];
-                    }
-                    else if(href[9]=="10661"||href[9]=="10662"||href[9]=="10663"||href[9]=="16238"||href[9]=="16239"||href[9]=="10384"||href[9]=="11794"||href[9]=="12153"||href[9]=="10475"||href[9]=="10705"||href[9]=="10382"||href[9]=="30454"||href[9]=="21825"||href[9]=="25219"||href[9]=="10384"){
-                        return["¿Te ayudamos a diseñar tu salón ideal?","https://www.ikea.com/ms/es_ES/campaigns/salones/servicio-asesores-especialistas.html?icid=a1:iba|a2:es|a3:quieres diseñar|a4:diseña_salon|a7:ikea|a9:ver mas salon|cc:216"];
-                    }
-                    else{
-                        return["0","0"];
-                    }
-                }
-            
-                function crearMiniBox(){
-                    var c = document.createElement("div");
-                    c.id = "contenedor";
-                    c.className = "contenedor";
-                    document.body.appendChild(c);
-                    var d = document.createElement("div");
-                    d.id = "miniBox";
-                    d.className = "div-minibox";
-                    document.getElementById("contenedor").appendChild(d);
-                    var d2 = document.createElement("div");
-                    d2.id = "actionClose";
-                    d2.className = "div-actionBox";
-                    var p2 = document.createElement("p");
-                    p2.className = "p-action";
-                    p2.id ="actionText";
-                    var t2 = document.createTextNode("esconder");
-                    p2.appendChild(t2);
-                    d2.appendChild(p2);
-                    document.getElementById("contenedor").appendChild(d2);
-                    var i = document.createElement("img");
-                    i.src = "https://www.ikea.com/ms/es_ES/img/new_ways_to_shop/planning-icon.png";	
-                    i.className = "image-minibox";
-                    document.getElementById("miniBox").appendChild(i);
-                    var p = document.createElement("p");
-                    var t = document.createTextNode(texto);	
-                    p.appendChild(t);
-                    p.className = "p-minibox";
-                    document.getElementById("miniBox").appendChild(p);
-                    var a = document.createElement("a");
-                    a.href = enlace;
-                    var pa = document.createTextNode("Ver más");
-                    a.className = "a-miniBox";
-                    a.appendChild(pa);					
-                    document.getElementById("miniBox").appendChild(a);
-                    show = 1;
-                }
                             
-                function actionFunction() {
-                    if(show==1){
-                        document.getElementById("actionText").className = "p-action";
-                        document.getElementById("actionClose").className = "div-actionBox";
-                        document.getElementById("actionText").innerHTML = "Pregunta al experto";
-                        document.getElementById("miniBox").style.display = "none";
-                        document.getElementById("actionClose").style.float = "right";
-                        if(isSafari){
-                            document.getElementById("actionClose").style.marginRight = "15px";
-                        }else{
-                            document.getElementById("actionClose").style.marginRight = "0px";
-                        }
-                        show=0;
-                    }
-                    else if(show==0){
-                        document.getElementById("actionText").className = "actionText-close";
-                        document.getElementById("actionClose").className = "div-actionBox-close";
-                        document.getElementById("actionText").innerHTML = "X";
-                        document.getElementById("miniBox").style.display = "block";
-                        show=1;
-                    }
+<!--SCRIPTS-->
+<!--LOGIN-->
+    <!--STYLE-->
+    <style>
+    .btnForm{margin: 0 auto !important; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #1764b6 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #1764b6 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        display: block !important; position: relative !important; height: 35px !important;}
+    .btnForm:hover{margin: 0 auto !important; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #0f4196 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #0f4196 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        display: block !important; position: relative !important; height: 35px !important;}
+    .btnFormReg{margin: 0 auto !important; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #1764b6 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #1764b6 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+    position: relative !important; height: 35px !important;}
+    .btnFormReg:hover{margin: 0 auto !important; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #0f4196 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #0f4196 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        position: relative !important; height: 35px !important;}
+    .btnFormRegLeft{left: -95px; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #1764b6 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #1764b6 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        position: relative !important; height: 35px !important;}
+    .btnFormRegLeft:hover{left: -95px; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #0f4196 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #0f4196 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        position: relative !important; height: 35px !important;}
+    .btnFormReset{margin: 0 auto !important; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #1764b6 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #1764b6 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        position: relative !important; height: 35px !important;}
+    .btnFormReset:hover{margin: 0 auto !important; cursor: pointer !important; display: inline-block !important; font-family: Verdana !important; padding: 6px 10px 7px !important; font-weight: bold !important; background-color: #0f4196 !important;
+        padding: 6px 10px 7px !important; border: 1px solid #0f4196 !important; font-size: 12px!important; line-height: 1 !important; color: white !important; width: 250px !important; text-align: center !important;
+        position: relative !important; height: 35px !important;}
+    .newInputLogin{width: 263px !important; height: 25px !important; font-size: 11px !important; padding-left: 5px !important;}
+    .newInputRegister{width: 300px !important; height: 25px !important; font-size: 11px !important; padding-left: 5px !important;}
+    .newInputReset{width: 500px !important; height: 25px !important; font-size: 11px !important; padding-left: 5px !important;}
+    </style>  
+	<!--STYLE-->
+    <!--SCRIPT-->
+    <script>
+        var url, quer, btnOr1, btnOr2, inputLogin, inputPwd;
+        url = document.location.href.split("/");
+        if(url[2] == "secure.ikea.com"){
+            quer = url[7].split("?");
+            if(quer[0]=="LogonForm"){
+                document.getElementsByClassName("formHeadline")[0].style.display = "none";
+                document.getElementsByClassName("formColLeft errorPH")[0].innerHTML = "<label class='checkBoxMainLabel' for='_rememberMe'>Recordarme</label>";
+                document.getElementsByClassName("formField")[0].style.display = "none";
+                document.getElementsByClassName("subText")[0].innerHTML = "Email o IKEA FAMILY";
+                document.getElementsByClassName("subText")[0].style.margin = "7px 6px";
+                document.getElementsByClassName("subText")[1].innerHTML = "Contraseña";
+                document.getElementsByClassName("subText")[1].style.margin = "7px 6px";
+                for(var i = 0; i<2; i++){
+                    document.getElementsByTagName("td")[i].style.backgroundColor = "white";
+                    document.getElementsByTagName("td")[i].style.width = "500px";
                 }
-                
-            </script>
-            <!--MINIBOX-->
-
-            <!--LANGUAGE SELECTOR PARA INGLES-->
-            <script>
-                //ES/CA/EU TO EN
-                function changeLanguage(){
-                    var from = document.location.href.split("/");
-                    var to = from[0];
-                    if(from[4]=="ca"||from[4]=="eu"){
-                        from[2]="www.ikea.com";
-                        from[4]="en";
-                        for (var i = 1; i < from.length; i++) {
-                            to+="/"+from[i]
-                        };
+                btnOr1 = document.getElementsByTagName("input")[10];
+                btnOr1.classList.remove("orangeBtn");
+                btnOr1.classList.add("btnForm");
+                btnOr2 = document.getElementsByTagName("input")[14];
+                btnOr2.classList.remove("orangeBtn");
+                btnOr2.classList.add("btnForm");
+                inputLogin = document.getElementById("login_logonId");
+                inputLogin.classList.add("newInputLogin");
+                inputPwd = document.getElementById("login_logonPassword");
+                inputPwd.classList.add("newInputLogin");
+            }
+        }
+        url = document.location.href.split("/");
+        if(url[2] == "secure.ikea.com"){
+            quer = url[7].split("?");
+            if(quer[0]=="ResetPassword"){     
+                if(document.getElementById("mobil_phone")){
+                document.getElementById("mobil_phone").value = "";
+                }   
+            }
+        }
+        url = document.location.href.split("/");
+        if(url[2]=="secure.ikea.com"){
+            if(url[7]=="CreateUser"){
+                document.getElementById("txtMainHdr1").style.display = "none";
+                document.getElementsByClassName("espotListHead")[0].innerHTML = "Crear perfil";
+                document.getElementById("createUser").style.backgroundColor = "white";
+                document.getElementById("createUser").style.width = "600px";
+                document.getElementById("createUser").style.marginLeft = "-60px";
+                document.getElementsByClassName("formField")[7].style.display = "none";
+                document.getElementsByClassName("formField")[9].style.display = "none";
+                inputLogin = document.getElementById("createUser_firstName");
+                inputLogin.classList.add("newInputRegister");
+                inputLogin = document.getElementById("createUser_lastName");
+                inputLogin.classList.add("newInputRegister");
+                inputLogin = document.getElementById("createUser_phone2");
+                inputLogin.classList.add("newInputRegister");
+                inputLogin = document.getElementById("createUser_email1");
+                inputLogin.classList.add("newInputRegister");
+                inputLogin = document.getElementById("createUser_email1_verify");
+                inputLogin.classList.add("newInputRegister");
+                inputLogin = document.getElementById("createUser_logonPassword");
+                inputLogin.classList.add("newInputRegister");
+                inputLogin = document.getElementById("createUser_logonPasswordVerify");
+                inputLogin.classList.add("newInputRegister");
+                for(var i = 0; i<6;i++){
+                    document.getElementsByTagName("label")[i].style.margin = "7px 6px";
+                }
+                btnOr1 = document.getElementsByTagName("input")[27];
+                btnOr1.classList.remove("orangeBtn");
+                btnOr1.classList.add("btnFormRegLeft");
+                btnOr2 = document.getElementsByTagName("input")[28];
+                btnOr2.classList.remove("orangeBtn");
+                btnOr2.classList.add("btnFormReg");
+                document.getElementById("createUserFormErrors").innerHTML="";
+                document.getElementById("createUser_firstName_required_FieldError").innerHTML = "Por favor, introduce el nombre";
+            }
+        }
+        url = document.location.href.split("/");
+        if(url[2]=="secure.ikea.com"){
+            quer = url[7].split("?");
+            if(quer[0]=="ResetPassword"){
+                if(document.getElementById("resetPassword")){
+                    document.getElementsByClassName("ppContentBodyColor")[0].style.backgroundColor = "white";
+                    document.getElementsByClassName("ppUppercase")[0].innerHTML = "Recuperar mi contraseña";
+                    document.getElementsByTagName("label")[0].innerHTML="Email o IKEA FAMILY";
+                    document.getElementsByTagName("label")[0].style.margin = "7px 6px";
+                    inputPwd = document.getElementById("resetPassword_logonId");
+                    inputPwd.classList.add("newInputReset");
+                    document.getElementsByClassName("ImageHeadline")[0].style.display = "none";
+                    document.getElementsByClassName("formField")[1].style.marginTop = "-15px";
+                    document.getElementsByClassName("checkBoxLabel")[0].innerHTML = "por Email";
+                    document.getElementsByClassName("checkBoxLabel")[1].innerHTML = "por SMS";
+                    btnOr1 = document.getElementsByTagName("input")[15];
+                    btnOr1.classList.remove("orangeBtn");
+                    btnOr1.classList.add("btnFormReset");
+                    btnOr2 = document.getElementsByTagName("input")[16];
+                    btnOr2.classList.remove("orangeBtn");
+                    btnOr2.classList.add("btnFormReset");
+                    document.getElementsByClassName("buttonWrapper")[0].style.textAlign = "center";
+                }
+            }
+        }
+    </script>
+  	<!--SCRIPT-->
+<!--LOGIN-->
+<!--BORRAR BREADCRUMBS-->
+    <script type="text/javascript">
+        if(document.getElementById("breadCrumbNew")!=null){
+            document.getElementById("main").removeChild(document.getElementById("breadCrumbNew"));
+            document.getElementById("main").removeChild(document.getElementsByClassName("departmentLinkBlock")[0]);
+        }
+    </script>
+<!--BORRAR BREADCRUMBS-->
+<!--SHOPPING LIST / PAIN POINTS Y REDISEÑO-->
+    <div id="script"></div>
+    <script type="text/javascript">
+        if(document.getElementById("shoppingList")!=null){
+            var tag = document.createElement('script');
+            tag.src = "//behtar.loyaltypoint.pl/GenerateScript/D089C758-B46F-432C-9F8E-5018A18435CF";
+            tag.setAttribute('async','');
+            document.getElementById('script').appendChild(tag);
+            document.getElementById("btnContainerTop").style.display = "none";
+            setTimeout(function(){
+                document.getElementById("deliveryHeader").style.display = "none";
+                if(document.getElementById("cc-buy-online-button")){
+                    var p1 = document.getElementById("anonymous_element_2");
+                    var p2 = p1.getElementsByTagName("td")[1];
+                    var p3 = p2.getElementsByTagName("div")[0];
+                    p2.removeChild(p3);
+                    var d = document.createElement("div");
+                    var a = document.createElement("a");
+                    a.href = "https://www.ikea.com/es/es/";
+                    a.id = "lnkContShopTotal";
+                    a.className = "btnSeguirComprando";
+                    var pa = document.createTextNode("Seguir comprando");
+                    a.appendChild(pa);					
+                    d.appendChild(a);
+                    var e = document.getElementsByClassName("clickCollectButton")[0];    
+                    e.insertBefore(d, e.childNodes[0]);
+                }
+            },2000);
+        }
+    </script>
+<!--SHOPPING LIST / PAIN POINTS Y REDISEÑO-->
+<!--CERRAR COOKIES-->
+    <!--STYLE-->
+    <style>
+        .btn-cerrar{float: right; width:100px; height:25px; color:black; background-color:transparent; box-shadow: none !important; border:none !important; font-size:11px; 
+        font-family: verdana; margin-top:2px; margin-left:2px; font-weight: bold;}
+        .btn-cerrar:hover{font-weight: normal;}
+    </style>
+    <!--STYLE-->
+    <script type="text/javascript">
+        setTimeout(function(){
+            if (document.getElementById("cookies_legislation")!=null){
+                var btn;
+                btn = document.createElement("button");
+                btn.id = "cerrar";
+                btn.className = "btn-cerrar";
+                document.getElementById("cookies_legislation").insertBefore(btn, document.getElementById("cookies_legislation").firstChild);
+                document.getElementById("cerrar").innerHTML = "X";
+            }
+            if (document.getElementById("cerrar")){
+                document.getElementById("cerrar").onclick = function(){
+                    document.getElementById("cookieMsgBlock").style.display ="none";
+                }
+            }
+        }, 1500);
+    </script>
+<!--CERRAR COOKIES-->
+<!--MODIFICAR TODOS LOS PRODUCTOS-->
+    <script type="text/javascript">
+        var c = document.location.href.split("/");
+        if(c[6]=="allproducts"){
+            var d = document.createElement("div");
+            d.id = "containerProducts";
+            var a = document.createElement("a");
+            a.href = "/es/es/catalog/productsaz/0/";
+            a.id = "products";
+            document.getElementsByClassName("paginationPadding")[0].appendChild(d);
+            document.getElementById("containerProducts").appendChild(a);
+            document.getElementById("products").innerHTML = "Encontrar productos por nombre ›";
+            var sheet = (function() {
+                var style = document.createElement("style");
+                style.appendChild(document.createTextNode(""));
+                document.head.appendChild(style);
+                return style.sheet;})();                
+            sheet.insertRule("#allProductsMain { width: 1060px !important; }", 0);
+            sheet.insertRule("#allProductsNavigation { display: none !important; }", 0);
+            sheet.insertRule("#allProductsContainer { width: 1060px !important; height: 60px !important;}", 0);
+            sheet.insertRule(".rightContent .paginationContainerNoTopMargin { height: 60px; width: 1060px !important; background: none !important; border-left: none; border-bottom: solid thin lightgrey; border-top: solid thin lightgrey; float:right;}", 0);
+            sheet.insertRule("#products {font-family: Verdana; color: black !important; font-size: 1.15em;; display: block; font-weight: bold; margin-top: 2px; margin-left:10px;}", 0);
+            sheet.insertRule(".paginationLeft {float: right !important; color: black !important; display: block; font-weight: bold; margin-right: 32px; margin-bottom: 10px}", 0);
+            sheet.insertRule("#txtMainHdr {margin-top: 10px;  font-size: 22px;}", 0);
+            sheet.insertRule(".productCategoryContainer {width: 25em !important}", 0);
+            sheet.insertRule(".productsHeaderContainer {margin-bottom: 10px !important;}", 0);
+            document.getElementsByClassName("paginationPadding")[0].style.float ="right";
+            sheet.insertRule(".containerProducts {display: block; margin-top:30px !important; margin-left: 10px;}", 0);
+            var c = document.getElementsByClassName("productCategoryDivider");
+            for (var i =0; i<c.length; i++){
+                document.getElementsByClassName("productCategoryDivider")[i].style.width ="26em";
+            }	
+            sheet.insertRule(".textContainer {font-size: 10px !important; color: black !important;}", 0);
+            sheet.insertRule(".textContainer a{color: black !important; margin-bottom: 8px;}", 0);
+            sheet.insertRule(".header {color: black !important; font-size: 12px !important;}", 0);
+        }
+    </script>
+<!--MODIFICAR TODOS LOS PRODUCTOS-->  
+<!--MINIBOX-->
+    <link rel="stylesheet" href="https://www.ikea.com/ms/es_ES/css/mb.css" type="text/css">
+    <script>	
+        var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        var isEdge = !isIE && !!window.StyleMedia;
+        var href = document.location.href.split("/");
+        var texto; var enlace; var arrayData; var show; var control;
+        function loadMinibox(){
+            if(href.length>8){
+                if(href[8]=="bedroom" || href[8]=="living_room" || href[8]=="dining"){
+                    arrayData = campos();
+                    texto = arrayData[0];
+                    enlace = arrayData[1];
+                    if(texto!=0 || enlace!=0){
+                        crearMiniBox();	
+                        setTimeout(function(){
+                            if(window.innerWidth>1330){
+                                show = 0;
+                                actionFunction();
+                                document.getElementById("miniBox").style.display ="block";
+                            }
+                            else{
+                                show = 1;
+                                actionFunction();
+                            }	
+                            document.getElementById("actionClose").style.display="block";					
+                        },1500);				
                     }else{
-                        from[4]="en";
-                        for (var i = 1; i < from.length; i++) {
-                            to+="/"+from[i]
-                        };
-                    };	
-                    document.location.href = to;
+                        control = 0;
+                    }
+                }else{
+                    control=0;
+                }
+            }
+        }
+        if(isIE || isEdge){            
+        }else{
+            loadMinibox();
+            if(control!=0){
+                window.addEventListener("resize", myFunction);
+                document.getElementById("actionClose").addEventListener("click", actionFunction);
+            }
+        }  
+        var w;
+        var x = 0;
+        function myFunction() {
+            w = x = window.innerWidth;
+            mostrar();
+        }        
+        function mostrar(){
+            if(w<=1330){
+                show = 1;
+                actionFunction();
+            }
+            else{
+                show = 0;
+                actionFunction();
+            }
+        }    
+        function campos(){
+            if(href[9]=="16284"||href[9]=="16285"||href[9]=="19037"||href[9]=="25205"){
+                return["¿Te ayudamos a diseñar tu dormitorio?","https://www.ikea.com/ms/es_ES/campaigns/dormitorios/servicios-diseno-reforma.html?icid=a1:iba|a2:es|a3:quieres diseñar|a4:diseña_armario|a7:ikea|a9:ver mas armarios|cc:216"];
+            }
+            else if(href[9]=="19053"||href[9]=="29879"||href[9]=="19110-2"||href[9]=="19106-2"||href[9]=="20087-2"||href[9]=="19112-2"||href[9]=="40206-2"||href[9]=="19115-2"){
+                return["¿Te ayudamos a diseñar tu armario?","https://www.ikea.com/ms/es_ES/campaigns/dormitorios/servicios-diseno-reforma.html?icid=a1:iba|a2:es|a3:quieres diseñar|a4:diseña_dormitorio|a7:ikea|a9:ver mas dormitorios|cc:216"];
+            }
+            else if(href[9]=="10661"||href[9]=="10662"||href[9]=="10663"||href[9]=="16238"||href[9]=="16239"||href[9]=="10384"||href[9]=="11794"||href[9]=="12153"||href[9]=="10475"||href[9]=="10705"||href[9]=="10382"||href[9]=="30454"||href[9]=="21825"||href[9]=="25219"||href[9]=="10384"){
+                return["¿Te ayudamos a diseñar tu salón ideal?","https://www.ikea.com/ms/es_ES/campaigns/salones/servicio-asesores-especialistas.html?icid=a1:iba|a2:es|a3:quieres diseñar|a4:diseña_salon|a7:ikea|a9:ver mas salon|cc:216"];
+            }
+            else{
+                return["0","0"];
+            }
+        }    
+        function crearMiniBox(){
+            var c = document.createElement("div");
+            c.id = "contenedor";
+            c.className = "contenedor";
+            document.body.appendChild(c);
+            var d = document.createElement("div");
+            d.id = "miniBox";
+            d.className = "div-minibox";
+            document.getElementById("contenedor").appendChild(d);
+            var d2 = document.createElement("div");
+            d2.id = "actionClose";
+            d2.className = "div-actionBox";
+            var p2 = document.createElement("p");
+            p2.className = "p-action";
+            p2.id ="actionText";
+            var t2 = document.createTextNode("esconder");
+            p2.appendChild(t2);
+            d2.appendChild(p2);
+            document.getElementById("contenedor").appendChild(d2);
+            var i = document.createElement("img");
+            i.src = "https://www.ikea.com/ms/es_ES/img/new_ways_to_shop/planning-icon.png";	
+            i.className = "image-minibox";
+            document.getElementById("miniBox").appendChild(i);
+            var p = document.createElement("p");
+            var t = document.createTextNode(texto);	
+            p.appendChild(t);
+            p.className = "p-minibox";
+            document.getElementById("miniBox").appendChild(p);
+            var a = document.createElement("a");
+            a.href = enlace;
+            var pa = document.createTextNode("Ver más");
+            a.className = "a-miniBox";
+            a.appendChild(pa);					
+            document.getElementById("miniBox").appendChild(a);
+            show = 1;
+        }                    
+        function actionFunction() {
+            if(show==1){
+                document.getElementById("actionText").className = "p-action";
+                document.getElementById("actionClose").className = "div-actionBox";
+                document.getElementById("actionText").innerHTML = "Pregunta al experto";
+                document.getElementById("miniBox").style.display = "none";
+                document.getElementById("actionClose").style.float = "right";
+                if(isSafari){
+                    document.getElementById("actionClose").style.marginRight = "15px";
+                }else{
+                    document.getElementById("actionClose").style.marginRight = "0px";
+                }
+                show=0;
+            }
+            else if(show==0){
+                document.getElementById("actionText").className = "actionText-close";
+                document.getElementById("actionClose").className = "div-actionBox-close";
+                document.getElementById("actionText").innerHTML = "X";
+                document.getElementById("miniBox").style.display = "block";
+                show=1;
+            }
+        }
+        
+    </script>
+<!--MINIBOX-->
+<!--LANGUAGE SELECTOR PARA INGLES-->
+    <script>
+        //ES/CA/EU TO EN
+        function changeLanguage(){
+            var from = document.location.href.split("/");
+            var to = from[0];
+            if(from[4]=="ca"||from[4]=="eu"){
+                from[2]="www.ikea.com";
+                from[4]="en";
+                for (var i = 1; i < from.length; i++) {
+                    to+="/"+from[i]
                 };
-            </script>
-            <!--LANGUAGE SELECTOR PARA INGLES-->
-
-            <!--COOKIES-->
-            <script>
-                /*VAR DECLARATION*/
-                var c_val, ca, cc, cname, cvalue, d, expires, url_switch, preferedID, preferedID_text, preferedID_url, cookie_Check, addAlign, marco, urlMarco;
-
-                /*SET COOKIE IF YOU NEED TO MODIFY IT*/
-                function setCookie() {
-                        cname = "locationPreference";
-                        cvalue= "https://www.ikea.com/es/es/";
-                        d = new Date();
-                        d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-                        expires = "expires="+d.toUTCString();
-                        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
-                    }
-
-                /*EVENT HANDLE, MAIN FUNCTION THAT DISTRIBUTES make CALL TO IT*/
-                function getCookie(){
-                    if(sessionStorage.nopopup){}
-                        else{
-                            cc = document.cookie.split(";");
-                            for(i = 0; i< cc.length; i++){ 
-                                ca = cc[i].split("=");
-                                if(ca[0]=="locationPreference" || ca[0]==" locationPreference"){
-                                    i = cc.length+1;
-                                }
-                                else{}
-                            }
-                        }
-                    }
-
-                /*CHECKS IF A CUSTOMER COMES FROM IKEA ISLANDS*/
-                function checkURL(){
-                    url_switch = document.location.href.split("/");
-                    if (url_switch[url_switch.length-1]=="?switch"){
-                        setCookie();
-                    }
-                    else{
-                        getCookie();
-                    }
+            }else{
+                from[4]="en";
+                for (var i = 1; i < from.length; i++) {
+                    to+="/"+from[i]
+                };
+            };	
+            document.location.href = to;
+        };
+    </script>
+<!--LANGUAGE SELECTOR PARA INGLES-->
+<!--COOKIES-->
+	<!--ELEMENTO-->
+	<div class="contenedor-popup" id="geoPopup">
+		<div class="popup">
+			<p onclick="omitirPopup()" class="cerrar-popup">&times</p>
+			<p class="tit-popup">Bienvenido a IKEA</p>
+	    	<p class="body-popup">Parece que tu página habitual es IKEA <span id="preferedLoc_1"></span>.<br>¿Quieres volver a esa página?</p>
+	    	<p class="p-btn-popup" onclick="moveTo()">Sí, ir a IKEA <span id="preferedLoc_2"></span><span class="cta-popup-islas">›</span></p>
+	    	<p onclick="changeValue()" class="p-keep-popup">No gracias, perfiero quedarme en IKEA Península</p>
+		</div>
+	</div>
+   	<!--ELEMENTO-->
+    <!--STYLE-->
+    <style>
+	.contenedor-popup {position: fixed;	width: 100%; height: 100%; top: 0; left: 0;	right: 0; bottom: 0; margin: auto; background-color: rgba(162, 163, 163, 0.8); display:none; z-index:99999;}
+    .popup{display: block; background-color: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 380px; -webkit-animation: fadeIn 1s; animation: fadeIn 1s; font-family: Verdana; }
+  	.cerrar-popup{margin-top: -19px !important; padding: 0px; margin-bottom: 0px; margin-right: -16px; right: 0px; float: right;}
+	.cerrar-popup:hover{cursor: pointer;}  
+	.tit-popup{margin-top: 0px; text-align: center; font-size: 18px; font-weight: bold; padding-top: 10px;}
+	.body-popup{font-size: 14px; text-align: center;}
+	.p-btn-popup{text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 14px; background-color: #095da7; color: white; margin-left: 85px; margin-right: 85px;}
+	.p-btn-popup:hover{cursor: pointer; background-color: #0f4196;}
+	.p-btn-popup:hover .cta-popup-islas{text-decoration: none !important;}
+	.p-keep-popup{text-align: center; font-size: 12px; margin-bottom: 10px; padding-top: 10px;}
+	.p-keep-popup:hover{text-decoration: underline; cursor: pointer;}
+	.cta-popup-islas{margin-left: 10px; display: inline-block; text-decoration: none !important;}
+	@-webkit-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+	@-moz-keyframes fadeIn {from {opacity: 0;} to {opacity:1 ;}}
+	@keyframes fadeIn {from {opacity: 0;} to {opacity:1 ;}}
+	</style>
+    <!--STYLE-->
+    <!--SCRIPT-->
+    <script>
+	/*VAR DECLARATION*/
+	var c_val, ca, cc, cname, cvalue, d, expires, url_switch, preferedID, preferedID_text, preferedID_url, cookie_Check, addAlign, marco, urlMarco, domain;
+	/*SET COOKIE IF YOU NEED TO MODIFY IT*/
+	function setMyCookie() {
+		cname = "locationPreference";
+		cvalue= "https://www.ikea.com/es/es/";
+		d = new Date();
+		d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+		expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
+	}
+    /*EVENT HANDLE, MAIN FUNCTION THAT DISTRIBUTES make CALL TO IT*/
+	function getMyCookie(){
+		if(sessionStorage.nopopup){}
+      	else{
+        	cc = document.cookie.split(";");
+        	for(i = 0; i< cc.length; i++){ 
+          		ca = cc[i].split("=");
+          		if(ca[0]=="locationPreference" || ca[0]==" locationPreference"){
+            		revisarCookie(ca[1]);
+            		i = cc.length+1;
+          		}
+          		else{}
+        	}
+      	}
+	}
+    /*CHECKS IF A CUSTOMER COMES FROM IKEA ISLANDS*/
+    function checkURL(){
+        url_switch = document.location.href.split("/");
+        if (url_switch[url_switch.length-1]=="?switch"){
+            setMyCookie();
+        }
+        else{
+            getMyCookie();
+        }
+    }
+	/*DECIDES IF POP UP SHOULD VE SHOWN OR NOT*/
+    function revisarCookie(c_val){
+        if(!sessionStorage.nopopup){
+            if(c_val=="http://www.ikea.com/es/es/" || c_val=="http://ca.ikea.com/es/ca/" || c_val=="http://eu.ikea.com/es/eu/" || c_val =="https://www.ikea.com/es/es/" || c_val=="https://ca.ikea.com/es/ca/" || c_val=="https://eu.ikea.com/es/eu/"){
+                setMyCookie();
+            }
+            else if(c_val=="http://www.baleares.ikea.es/" || c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.baleares.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
+                if(c_val=="http://www.baleares.ikea.es/" || c_val=="https://www.baleares.ikea.es/") {
+                    preferedID_text = "Baleares";
+                    preferedID_url = "http://www.baleares.ikea.es/?switch";
                 }
-
-                /*DECIDES IF POP UP SHOULD VE SHOWN OR NOT*/
-                function revisarCookie(c_val){
-                    if(!sessionStorage.nopopup){
-                        if(c_val=="http://www.ikea.com/es/es/" || c_val=="http://ca.ikea.com/es/ca/" || c_val=="http://eu.ikea.com/es/eu/" || c_val =="https://www.ikea.com/es/es/" || c_val=="https://ca.ikea.com/es/ca/" || c_val=="https://eu.ikea.com/es/eu/"){
-                            setCookie();
-                        }
-                        else if(c_val=="http://www.baleares.ikea.es/" || c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.baleares.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
-                            if(c_val=="http://www.baleares.ikea.es/" || c_val=="https://www.baleares.ikea.es/") {
-                                preferedID_text = "Baleares";
-                                preferedID_url = "//www.baleares.ikea.es/?switch";
-                            }
-                            else if(c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
-                                preferedID_text = "Canarias";
-                                preferedID_url = "//www.canarias.ikea.es/?switch";
-                            } 
-                            preferedID = [preferedID_text, preferedID_url];
-                            drawPopUp(preferedID);
-                        }
-                        else{
-                        }
-                    }
-                    else{}
+                else if(c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
+                    preferedID_text = "Canarias";
+                    preferedID_url = "http://www.canarias.ikea.es/?switch";
+                } 
+                preferedID = [preferedID_text, preferedID_url];
+                drawPopUp(preferedID);
+            }
+            else{
+            }
+        }
+        else{}
+    }
+    /*HANDLE POPUP FUNCTIONS*/
+    function drawPopUp(preferedID){
+        document.getElementById("preferedLoc_1").innerHTML = preferedID[0];
+        document.getElementById("preferedLoc_2").innerHTML = preferedID[0];
+        var popup = document.getElementById("geoPopup");
+        popup.style.display= "block";
+    }
+    /*WHEN USER DECIDES TO KEEP IN PENINSULA WEB*/
+    function changeValue(){
+        setMyCookie();
+        callToIslands();
+        document.getElementById("geoPopup").style.display="none";
+    }
+    /*REDIRECT TO CUSTOMER PREFERED LOCATION*/
+    function moveTo(){
+        window.location.replace(preferedID_url);
+    }
+    /*THIS FUNCTION WORKS WHEN CUSTOMER SKIPS POPUP*/
+    function omitirPopup(){
+        sessionStorage.nopopup = 1;
+        document.getElementById("geoPopup").style.display="none";
+    }
+    /*OPEN COOKIE ALIGN IN ISLANDS*/
+    function callToIslands(addAlign){
+        addAlign = document.getElementsByClassName("footer-legal")[0];
+        marco = document.createElement("iframe");
+        urlMarco = "https://canarias.ikea.es/?switch=es";
+        marco.src = urlMarco;
+        marco.style.display="none";
+        marco.style.width = "1px";
+        marco.style.height = "1px";
+        addAlign.appendChild(marco);
+    }
+    /*THIS FUNCTION WORKS WHEN CUSTOMER CLICKS ON ISLANDS IN HEADER*/
+    function redirectTo(islands_url){
+        cc = document.cookie.split(";");
+            for(i = 0; i< cc.length; i++){ 
+                ca = cc[i].split("=");
+                if(ca[0]=="locationPreference" || ca[0]==" locationPreference"){
+                    cookie_Check = ca[1];
+                    i = cc.length+1;
                 }
-
-                /*HANDLE POPUP FUNCTIONS*/
-                function drawPopUp(preferedID){
-                    document.getElementById("preferedLoc_1").innerHTML = preferedID[0];
-                    document.getElementById("preferedLoc_2").innerHTML = preferedID[0];
-                    document.getElementById("preferedLoc_3").innerHTML = preferedID[1];
-                    var popup = document.getElementById("geoPopup");
-                    popup.style.display= "block";
+            }
+            if (cookie_Check=="http://www.ikea.com/es/es/" || cookie_Check=="http://ca.ikea.com/es/ca/" || cookie_Check=="http://eu.ikea.com/es/eu/" || cookie_Check=="https://www.ikea.com/es/es/" || cookie_Check=="https://ca.ikea.com/es/ca/" || cookie_Check=="https://eu.ikea.com/es/eu/"){
+                islands_url+= "?switch";
+                if(islands_url=="//www.canarias.ikea.es/?switch"){
+                    cname = "locationPreference";
+                    cvalue= "http://www.canarias.ikea.es/";
+                    d = new Date();
+                    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                    expires = "expires="+d.toUTCString();
+		            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
                 }
-
-                /*WHEN USER DECIDES TO KEEP IN PENINSULA WEB*/
-                function changeValue(){
-                    setCookie();
-                    callToIslands();
-                    document.getElementById("geoPopup").style.display="none";
+                else if(islands_url=="//www.baleares.ikea.es/?switch"){
+                    cname = "locationPreference";
+                    cvalue= "http://www.baleares.ikea.es/";
+                    d = new Date();
+                    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                    expires = "expires="+d.toUTCString();
+		            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
                 }
-
-                /*REDIRECT TO CUSTOMER PREFERED LOCATION*/
-                function moveTo(){
-                    window.location.replace(preferedID_url);
-                }
-
-                /*THIS FUNCTION WORKS WHEN CUSTOMER SKIPS POPUP*/
-                function omitirPopup(){
-                    sessionStorage.nopopup = 1;
-                    document.getElementById("geoPopup").style.display="none";
-                }
-
-                /*OPEN COOKIE ALIGN IN ISLANDS*/
-                function callToIslands(addAlign){
-                    addAlign = document.getElementsByClassName("footer-legal")[0];
-                    marco = document.createElement("iframe");
-                    urlMarco = "//www.canarias.ikea.es/?switch=es";
-                    marco.src = urlMarco;
-                    marco.style.display="none";
-                    marco.style.width = "1px";
-                    marco.style.height = "1px";
-                    addAlign.appendChild(marco);
-                }
-
-                /*THIS FUNCTION WORKS WHEN CUSTOMER CLICKS ON ISLANDS IN HEADER*/
-                function redirectTo(islands_url){
-                    cc = document.cookie.split(";");
-                        for(i = 0; i< cc.length; i++){ 
-                            ca = cc[i].split("=");
-                            if(ca[0]=="locationPreference" || ca[0]==" locationPreference"){
-                                cookie_Check = ca[1];
-                                i = cc.length+1;
-                            }
-                        }
-                        if (cookie_Check=="http://www.ikea.com/es/es/" || cookie_Check=="http://ca.ikea.com/es/ca/" || cookie_Check=="http://eu.ikea.com/es/eu/" || cookie_Check=="https://www.ikea.com/es/es/" || cookie_Check=="https://ca.ikea.com/es/ca/" || cookie_Check=="https://eu.ikea.com/es/eu/"){
-                            islands_url+= "?switch";
-                            if(islands_url=="//www.canarias.ikea.es/?switch"){
-                                cname = "locationPreference";
-                                cvalue= "https://www.canarias.ikea.es/";
-                                d = new Date();
-                                d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-                                expires = "expires="+d.toUTCString();
-                                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
-                            }
-                            else if(islands_url=="//www.baleares.ikea.es/?switch"){
-                                cname = "locationPreference";
-                                cvalue= "https://www.baleares.ikea.es/";
-                                d = new Date();
-                                d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-                                expires = "expires="+d.toUTCString();
-                                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
-                            }
-                        }
-                        else{}
-                        document.location.href = islands_url;
-                }
-            </script>
-            <script>
-                checkURL();
-            </script>
-            <!--COOKIES-->
-
-            <!--SCRIPTS-->
-
-            <!--FOOTER-->
+            }
+            else{}
+            document.location.href = islands_url;
+	}
+    </script>
+    <script>
+        checkURL();
+    </script>
+    <!--SCRIPT-->
+<!--COOKIES-->
+<!--SCRIPTS-->
+<!--FOOTER-->
