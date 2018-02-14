@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
     //<![CDATA[
     var storeId = "11";
     var userInfo = getUserInfo('11','normal');                                              
@@ -24,4 +24,3 @@
         }
     };
     //]]>
-</script>

@@ -37,35 +37,37 @@
     </script>
 <!-- FOOTER -->
 
-<!--LOGIN-->
-<script type="text/javascript">
-    //<![CDATA[
-    var storeId = "11";
-    var userInfo = getUserInfo('11','normal');                                              
-    document.observe('dom:loaded', function(){
-        userInfo = getUserInfo('11');
-        updateWelcomeText();
-        updateNoOfCartItems('11');
-        generateScLinkListener('11');
-    });
-    function updateWelcomeText(){
-        var userLoggedIn = '<p style="text-align:center;margin-top:1em;margin-bottom: 0em;margin-left: 1em;margin-right: 1em;font-size:12px;">¡Hola {title} {firstname} {lastname}!</p><p style="text-align:center; font-size: 11px; margin-top: 2em;">Accede a tu <a style="padding-top: 0em; font-size: 11px !important;" href="https://secure.ikea.com/webapp/wcs/stores/servlet/MyProfile?langId=-5&amp;storeId=11">área personal.</a></p><p style="margin-bottom: 0px; margin-top: 0px;text-align:center;"><a style="text-align:center;font-size: 11px;margin-top: -2em;" href="/ms/es_ES/service-offer/ikea-donde-esta-mi-pedido.html">¿Dónde está mi pedido?</a></p><hr><p style="text-align:center; font-size: 11px"><a style="text-align:center; font-size: 11px" href="/webapp/wcs/stores/servlet/Logoff?langId=-5&amp;storeId=11&amp;forgetMe=true" rel="nofollow">Cerrar sesión</a></p>';
-        var userNotLoggedIn = '<p style="text-align:center;margin-top:1em;margin-bottom:1em;font-size: 12px;">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p><p style="text-align:center; font-size: 12px !important;"><a href="javascript:logonLink();" class="btn-IniciaSesion" rel="nofollow">Inicia Sesión</a></p><hr class="hr-login"><p style="text-align:center; font-size: 12px;">¿No tienes cuenta?<br><br><a href="javascript:logonLink();" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>';
-        if(userInfo != null && userInfo.firstName != "" && userInfo.firstName != ""){
-            userLoggedIn = userLoggedIn.replace(/{firstname}/g,userInfo.firstName.escapeHTML());
-            userLoggedIn = userLoggedIn.replace(/{lastname}/g,userInfo.lastName.escapeHTML());
-            userLoggedIn = userLoggedIn.replace(/{title}/g,userInfo.title.escapeHTML());
-            document.getElementById("loginFormFunction").innerHTML = userLoggedIn;
-            document.getElementById("login-ico").style.filter = "none";     
-        }
-        else{
-            document.getElementById("loginFormFunction").innerHTML = userNotLoggedIn;
-            document.getElementById("login-ico").style.filter = "filter: grayscale(100%);"; 
-        }
-    };
-    //]]>
-</script>
-<!--LOGIN-->
+        <!--LOGIN-->
+        <script type="text/javascript">
+            //<![CDATA[
+            var storeId = "11";
+            var userInfo = getUserInfo('11','normal');                                              
+            document.observe('dom:loaded', function(){
+                userInfo = getUserInfo('11');
+                setTimeout(function(){
+                    updateWelcomeText();
+                }, 2000);
+                updateNoOfCartItems('11');
+                generateScLinkListener('11');
+            });
+            function updateWelcomeText(){
+                var userLoggedIn = '<p style="text-align:center;margin-top:1em;margin-bottom: 0em;margin-left: 1em;margin-right: 1em;font-size:12px;">¡Hola {title} {firstname} {lastname}!</p><p style="text-align:center; font-size: 11px; margin-top: 2em;">Accede a tu <a style="padding-top: 0em; font-size: 11px !important;" href="https://secure.ikea.com/webapp/wcs/stores/servlet/MyProfile?langId=-5&amp;storeId=11">área personal.</a></p><p style="margin-bottom: 0px; margin-top: 0px;text-align:center;"><a style="text-align:center;font-size: 11px;margin-top: -2em;" href="/ms/es_ES/service-offer/ikea-donde-esta-mi-pedido.html">¿Dónde está mi pedido?</a></p><hr><p style="text-align:center; font-size: 11px"><a style="text-align:center; font-size: 11px" href="/webapp/wcs/stores/servlet/Logoff?langId=-5&amp;storeId=11&amp;forgetMe=true" rel="nofollow">Cerrar sesión</a></p>';
+                var userNotLoggedIn = '<p style="text-align:center;margin-top:1em;margin-bottom:1em;font-size: 12px;">¡Hola de nuevo!<br>Nos gusta volver a verte<br></p><p style="text-align:center; font-size: 12px !important;"><a href="javascript:logonLink();" class="btn-IniciaSesion" rel="nofollow">Inicia Sesión</a></p><hr class="hr-login"><p style="text-align:center; font-size: 12px;">¿No tienes cuenta?<br><br><a href="javascript:logonLink();" style="color:black !important; text-decoration:underline;">Créala ahora</a></p>';
+                if(userInfo != null && userInfo.firstName != "" && userInfo.firstName != ""){
+                    userLoggedIn = userLoggedIn.replace(/{firstname}/g,userInfo.firstName.escapeHTML());
+                    userLoggedIn = userLoggedIn.replace(/{lastname}/g,userInfo.lastName.escapeHTML());
+                    userLoggedIn = userLoggedIn.replace(/{title}/g,userInfo.title.escapeHTML());
+                    document.getElementById("loginFormFunction").innerHTML = userLoggedIn;
+                    document.getElementById("login-ico").style.filter = "none";     
+                }
+                else{
+                    document.getElementById("loginFormFunction").innerHTML = userNotLoggedIn;
+                    document.getElementById("login-ico").style.filter = "filter: grayscale(100%);"; 
+                }
+            };
+            //]]>
+        </script>
+        <!--LOGIN-->
 
 <!--SCRIPT LANGUAGE TO ENGLISH-->
 <script>
@@ -96,8 +98,183 @@
     };
 </script>
 <!--SCRIPT LANGUAGE TO ENGLISH-->
-<!--COOKIES-->
-<script>
-    checkURL();
-</script>
-<!--COOKIES-->
+        <!--COOKIES-->
+            <!--ELEMENTO-->
+            <div class="contenedor-popup" id="geoPopup">
+                <div class="popup">
+                    <p onclick="omitirPopup()" class="cerrar-popup">&times</p>
+                    <p class="tit-popup">Bienvenido a IKEA</p>
+                    <p class="body-popup">Parece que tu página habitual es IKEA <span id="preferedLoc_1"></span>.<br>¿Quieres volver a esa página?</p>
+                    <p class="p-btn-popup" onclick="moveTo()">Sí, ir a IKEA <span id="preferedLoc_3"></span><span class="cta-popup-islas">›</span></p>
+                    <p onclick="changeValue()" class="p-keep-popup">No gracias, perfiero quedarme en IKEA Península</p>
+                </div>
+            </div>
+            <!--ELEMENTO-->
+            <!--STYLE-->
+            <style>
+            .contenedor-popup {position: fixed;	width: 100%; height: 100%; top: 0; left: 0;	right: 0; bottom: 0; margin: auto; background-color: rgba(162, 163, 163, 0.8); display:none; z-index:99999;}
+            .popup{display: block; background-color: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 380px; -webkit-animation: fadeIn 1s; animation: fadeIn 1s; font-family: Verdana; }
+            .cerrar-popup{margin-top: -19px !important; padding: 0px; margin-bottom: 0px; margin-right: -16px; right: 0px; float: right;}
+            .cerrar-popup:hover{cursor: pointer;}  
+            .tit-popup{margin-top: 0px; text-align: center; font-size: 18px; font-weight: bold; padding-top: 10px;}
+            .body-popup{font-size: 14px; text-align: center;}
+            .p-btn-popup{text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 14px; background-color: #095da7; color: white; margin-left: 85px; margin-right: 85px;}
+            .p-btn-popup:hover{cursor: pointer; background-color: #0f4196;}
+            .p-btn-popup:hover .cta-popup-islas{text-decoration: none !important;}
+            .p-keep-popup{text-align: center; font-size: 12px; margin-bottom: 10px; padding-top: 10px;}
+            .p-keep-popup:hover{text-decoration: underline; cursor: pointer;}
+            .cta-popup-islas{margin-left: 10px; display: inline-block; text-decoration: none !important;}
+            @-webkit-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+            @-moz-keyframes fadeIn {from {opacity: 0;} to {opacity:1 ;}}
+            @keyframes fadeIn {from {opacity: 0;} to {opacity:1 ;}}
+            </style>
+            <!--STYLE-->
+            <!--SCRIPT-->
+            <script>
+            /*VAR DECLARATION*/
+            var c_val, ca, cc, cname, cvalue, d, expires, url_switch, preferedID, preferedID_text, preferedID_url, cookie_Check, addAlign, marco, urlMarco, domain;
+            /*SET COOKIE IF YOU NEED TO MODIFY IT*/
+            function setMyCookie() {
+                cname = "locationPreference";
+                cvalue= "https://www.ikea.com/es/es/";
+                d = new Date();
+                d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                expires = "expires="+d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
+            }
+            /*EVENT HANDLE, MAIN FUNCTION THAT DISTRIBUTES make CALL TO IT*/
+            function getMyCookie(){
+                if(sessionStorage.nopopup){}
+                else{
+                    cc = document.cookie.split(";");
+                    for(i = 0; i< cc.length; i++){ 
+                        ca = cc[i].split("=");
+                        if(ca[0]=="locationPreference" || ca[0]==" locationPreference"){
+                            revisarCookie(ca[1]);
+                            i = cc.length+1;
+                        }
+                        else{}
+                    }
+                }
+            }
+            /*CHECKS IF A CUSTOMER COMES FROM IKEA ISLANDS*/
+            function checkURL(){
+                url_switch = document.location.href.split("/");
+                url_switch = url_switch[url_switch.length-1].split("&");
+                url_switch = url_switch[1];
+                if (url_switch=="switch"){
+                    setMyCookie();
+                }
+                else{
+                    getMyCookie();
+                }
+            }
+            /*DECIDES IF POP UP SHOULD VE SHOWN OR NOT*/
+            function revisarCookie(c_val){
+                if(!sessionStorage.nopopup){
+                    if(c_val=="http://www.ikea.com/es/es/" || c_val=="http://ca.ikea.com/es/ca/" || c_val=="http://eu.ikea.com/es/eu/" || c_val =="https://www.ikea.com/es/es/" || c_val=="https://ca.ikea.com/es/ca/" || c_val=="https://eu.ikea.com/es/eu/"){
+                        setMyCookie();
+                    }
+                    else if(c_val=="http://www.baleares.ikea.es/" || c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.baleares.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
+                        if(c_val=="http://www.baleares.ikea.es/" || c_val=="https://www.baleares.ikea.es/") {
+                            preferedID_text = "Baleares";
+                            preferedID_url = "http://www.baleares.ikea.es/?switch&utm_source=mp-bal";
+                        }
+                        else if(c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
+                            preferedID_text = "Canarias";
+                            preferedID_url = "http://www.canarias.ikea.es/?switch&utm_source=mp-can";
+                        } 
+                        preferedID = [preferedID_text, preferedID_url];
+                        drawPopUp(preferedID);
+                    }
+                    else{
+                    }
+                }
+                else{}
+            }
+            /*HANDLE POPUP FUNCTIONS*/
+            function drawPopUp(preferedID){
+                document.getElementById("preferedLoc_1").innerHTML = preferedID[0];
+                document.getElementById("preferedLoc_2").innerHTML = preferedID[0];
+                var popup = document.getElementById("geoPopup");
+                popup.style.display= "block";
+            }
+            /*WHEN USER DECIDES TO KEEP IN PENINSULA WEB*/
+            function changeValue(){
+                setMyCookie();
+                callToIslands();
+                document.getElementById("geoPopup").style.display="none";
+            }
+            /*REDIRECT TO CUSTOMER PREFERED LOCATION*/
+            function moveTo(){
+                window.location.replace(preferedID_url);
+            }
+            /*THIS FUNCTION WORKS WHEN CUSTOMER SKIPS POPUP*/
+            function omitirPopup(){
+                sessionStorage.nopopup = 1;
+                document.getElementById("geoPopup").style.display="none";
+            }
+            /*OPEN COOKIE ALIGN IN ISLANDS*/
+            function callToIslands(addAlign){
+                addAlign = document.getElementsByClassName("footer-legal")[0];
+                marco = document.createElement("iframe");
+                urlMarco = "https://canarias.ikea.es/?switch=es";
+                marco.src = urlMarco;
+                marco.style.display="none";
+                marco.style.width = "1px";
+                marco.style.height = "1px";
+                addAlign.appendChild(marco);
+            }
+            /*THIS FUNCTION WORKS WHEN CUSTOMER CLICKS ON ISLANDS IN HEADER*/
+            function redirectTo(islands_url){
+                cc = document.cookie.split(";");
+                    for(i = 0; i< cc.length; i++){ 
+                        ca = cc[i].split("=");
+                        if(ca[0]=="locationPreference" || ca[0]==" locationPreference"){
+                            cookie_Check = ca[1];
+                            i = cc.length+1;
+                        }
+                    }
+                    if (cookie_Check=="http://www.ikea.com/es/es/" || cookie_Check=="http://ca.ikea.com/es/ca/" || cookie_Check=="http://eu.ikea.com/es/eu/" || cookie_Check=="https://www.ikea.com/es/es/" || cookie_Check=="https://ca.ikea.com/es/ca/" || cookie_Check=="https://eu.ikea.com/es/eu/"){
+                        islands_url+= "?switch";
+                        if(islands_url=="//www.canarias.ikea.es/?switch"){
+                            islands_url+="&utm_source=mh-can";
+                            cname = "locationPreference";
+                            cvalue= "http://www.canarias.ikea.es/";
+                            d = new Date();
+                            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                            expires = "expires="+d.toUTCString();
+                            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
+                        }
+                        else if(islands_url=="//www.baleares.ikea.es/?switch"){
+                            islands_url+="&utm_source=mh-bal";
+                            cname = "locationPreference";
+                            cvalue= "http://www.baleares.ikea.es/";
+                            d = new Date();
+                            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                            expires = "expires="+d.toUTCString();
+                            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
+                        }
+                    }
+                    else{
+                        if(islands_url == "http://www.canarias.ikea.es/"){
+                            islands_url+=""
+                        }
+                        else if(islands_url == "http://www.baleares.ikea.es/"){
+                            islands_url+="&utm_source=mh-bal";
+                        }
+                    }
+                    document.location.href = islands_url;
+            }
+            </script>
+            <script>
+                checkURL();
+            </script>
+            <!--SCRIPT-->
+        <!--COOKIES-->
+        <!-- MAXIMYSER -->
+            <script src="//tags.tiqcdn.com/utag/ikea/es-main/prod/utag.sync.js"></script><script type="text/javascript" src="//service.maxymiser.net/api/eu/ikea.es/eb8261/mmapi.js"></script>
+        <!-- MAXIMYSER -->
+        <!--IPLUGINS-->
+            <script id="iplugins-implementation-tag" type="text/javascript" src="https://ww8.ikea.com/ext/iplugins/implement.js" data-account="es_ES"></script>
+        <!--IPLUGINS-->
