@@ -1,7 +1,7 @@
 <!--COPY FROM HERE-->
         <style>
-            body{width:1060px; margin:0 auto; font-family:Verdana;}
             /*ROWS*/
+                body{width:1060px; margin:0 auto; font-family:Verdana;}
                 .row-for-1{float:left; width: 100%}
                 .row-for-2{float:left; width: 50%}
                 .row-for-4{float:left; width:25%}
@@ -162,7 +162,7 @@
                 .btn-lupaBuscador{margin-right:-48px; margin-top:-37px;}
             </style>
         <![endif]-->
-         <!--[if lte IE 8]>
+        <!--[if lte IE 8]>
             <style type="text/css">
                 .top-compra-online{font-size:11px; background-color: whitesmoke;width: 100%; height: 35px; text-align: center;}
                 .img-top-compra-online{width: 25px; margin-top: -10px; position: absolute; margin-left: 0px;}   
@@ -193,9 +193,7 @@
         <![endif]-->       
     </head>
     <body>       
-        <div style="width:1060px; margin:auto 0;">
-           
-           
+        <div style="width:1060px; margin:auto 0;">        
             <!--BARRA COMPRA ONLINE-->
                 <div class="top-compra-online">
                     <p class="row-for-4 top-compra-online-left"><b>Compra online</b></p>
@@ -218,7 +216,6 @@
                     </p>
                 </div>
             <!--BARRA COMPRA ONLINE-->
-
             <!--BARRA IDIOMAS Y SERVICIOS-->
                 <div class="top-idiomas-servicios">
                     <div class="row-for-8">
@@ -291,8 +288,7 @@
                     </div>
                     <hr class="separador-idiomas-servicios">
                 </div>
-            <!--BARRA IDIOMAS Y SERVICIOS-->
-        
+            <!--BARRA IDIOMAS Y SERVICIOS-->        
             <!--BARRA BUSCADOR-->
                 <div class="top-barra-buscador">
                     <form id="myAccount" action="/webapp/wcs/stores/servlet/LogonForm" method="get">
@@ -339,7 +335,7 @@
                         <div>
                             <p class="elemento-navegacion despliega-productos align-left">Productos<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                             <div class="productos">
-                                <div class="row-for-4">
+                                <div class="row-for-4" id="filaProductos1">
                                     <a href="/ms/es_ES/campaigns/camas_colchones/index.html" class="elemento-desplegable-navegacion">Camas y colchones</a>
                                     <a href="/ms/es_ES/campaigns/muebles/index.html" class="elemento-desplegable-navegacion">Muebles, armarios y estanterías</a>
                                     <a href="/es/es/catalog/categories/departments/living_room/sofas_armchairs/" class="elemento-desplegable-navegacion">Sofás y sillones</a>
@@ -352,7 +348,7 @@
                                     <a href="/es/es/catalog/categories/departments/kitchen/appliances/" class="elemento-desplegable-navegacion">Electrodomésticos</a>
                                     <a href="/es/es/catalog/categories/departments/home_electronics/" class="elemento-desplegable-navegacion">Tecnología y accesorios</a>
                                 </div>
-                                <div class="row-for-4 row-for-4-fx">
+                                <div class="row-for-4 row-for-4-fx" id="filaProductos2">
                                         <a href="/ms/es_ES/campaigns/lavabos_fregaderos/index.html" class="elemento-desplegable-navegacion">Lavabos, fregaderos y grifería</a>
                                         <a href="/es/es/catalog/categories/departments/small_storage/" class="elemento-desplegable-navegacion">Organización y accesorios de almacenaje</a>
                                         <a href="/ms/es_ES/campaigns/juguetes/index.html" class="elemento-desplegable-navegacion">Juguetes</a>
@@ -430,7 +426,7 @@
                         <div>
                             <p class="elemento-navegacion despliega-estancias align-left">Estancias<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                             <div class="estancias">
-                                <div class="row-for-4">
+                                <div class="row-for-4" id="filaEstancias">
                                     <a href="/es/es/catalog/categories/departments/bedroom/" class="elemento-desplegable-navegacion">Dormitorio</a>
                                     <a href="/es/es/catalog/categories/departments/living_room/" class="elemento-desplegable-navegacion">Salón</a>
                                     <a href="/es/es/catalog/categories/departments/dining/" class="elemento-desplegable-navegacion">Comedor</a>
@@ -526,10 +522,10 @@
                                                     <div class="elemento-interior-estancias-2" id="cajaProductoBannerEstancias2">
                                                         <p class="titulo-interior-estancias-2" id="tituloProductoBannerEstancias2">VARDAGEN</p>
                                                         <p class="descripcion-interior-estancias-2" id="descProductoBannerEstancias2">Fuente de horno</p>
-                                                        <p class="precio-interior-estancias-2" id="precioProductoBannerEstancias1">€8,99<span class="ud-interior-estancias-2">/ud</span></p>
+                                                        <p class="precio-interior-estancias-2" id="precioProductoBannerEstancias2">€8,99<span class="ud-interior-estancias-2">/ud</span></p>
                                                         <div class="dot-ratingsreviews-desplegable-banner">
                                                             <span class="hp-rating-stars hp-rating-stars-off" aria-hidden="true">  ★★★★★ </span>
-                                                            <span class="hp-rating-stars hp-rating-stars-on" style="width:0% !important;" aria-hidden="true" id="porcentajeProductoBannerEstancias1">  ★★★★★ </span>
+                                                            <span class="hp-rating-stars hp-rating-stars-on" style="width:0% !important;" aria-hidden="true" id="porcentajeProductoBannerEstancias2">  ★★★★★ </span>
                                                             <p class="hp-ratings-number" id="reviewsProductoBannerEstancias2">(0)</p>
                                                         </div>
                                                     </div>
@@ -552,7 +548,7 @@
                         <div>
                             <p class="elemento-navegacion despliega-novedades align-left">Novedades<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                             <div class="novedades">
-                                <div class="row-for-1">
+                                <div class="row-for-1" id="filaNovedades">
                                     <a href="/ms/es_ES/campaigns/novedades/index.html" class="elemento-desplegable-navegacion">Todas las novedades</a>
                                     <a href="/ms/es_ES/campaigns/precios_bajos/index.html" class="elemento-desplegable-navegacion">Hemos bajado el precio</a>
                                 </div>
@@ -563,7 +559,7 @@
                         <div>
                             <p class="elemento-navegacion despliega-promociones align-left" id="">Promociones<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                             <div class="promociones">
-                                <div class="row-for-1">
+                                <div class="row-for-1" id="filaPromociones">
                                     <a href="/ms/es_ES/campaigns/ofertas-y-promociones.html" class="elemento-desplegable-navegacion">Promociones</a>
                                     <a href="/ms/es_ES/campaigns/ofertas_combo_muebles/index.html" class="elemento-desplegable-navegacion">Descuentos especiales</a>
                                 </div>
@@ -574,7 +570,7 @@
                         <div>
                             <p class="elemento-navegacion align-center despliega-inspiracion">Inspiración<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                             <div class="inspiracion">
-                                <div class="row-for-1">
+                                <div class="row-for-1" id="filaInspiracion">
                                     <a href="/es/es/ideas/" class="elemento-desplegable-navegacion">Ideas</a>
                                     <a href="/ms/es_ES/campaigns/galeriafotos/index.html" class="elemento-desplegable-navegacion">Galería de fotos</a>
                                 </div>
@@ -585,7 +581,7 @@
                         <div>
                             <p class="elemento-navegacion align-right despliega-estoesIKEA">Sobre IKEA<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                             <div class="estoesIKEA">
-                                <div class="row-for-2">
+                                <div class="row-for-2" id="filaEstoEsIKEA1">
                                     <a href="/ms/es_ES/customer-service/index.html" class="elemento-desplegable-navegacion">Atención al cliente</a>
                                     <a href="/ms/es_ES/customer-service/about-shopping/catalogue-and-brochures/index.html" class="elemento-desplegable-navegacion">Catálogos</a>
                                     <a href="/ms/es_ES/this-is-ikea/index.html" class="elemento-desplegable-navegacion">Esto es IKEA</a>
@@ -595,7 +591,7 @@
                                     <a href="https://www.family.ikea.es/mapa/" class="elemento-desplegable-navegacion">IKEA FAMILY</a>
                                     <a href="https://ikeamuseum.com/en/" class="elemento-desplegable-navegacion">Museo IKEA</a>
                                 </div>
-                                <div class="row-for-2">
+                                <div class="row-for-2" id="filaEstoEsIKEA2">
                                     <a href="/ms/es_ES/this-is-ikea/people-and-planet/index.html" class="elemento-desplegable-navegacion">Personas + Planeta</a>
                                     <a href="/ms/es_ES/customer-service/about-our-products/planning-tools/index.html" class="elemento-desplegable-navegacion">Planificadores</a>
                                     <a href="/es/es/catalog/categories/departments/food/#restaurante" class="elemento-desplegable-navegacion">Restaurante</a>
@@ -612,6 +608,6 @@
                 </div>
             <!--BARRA NAVEGACIÓN-->
             
-           
+            
         </div>        
-        <!--COPY TO HERE-->
+<!--COPY TO HERE-->

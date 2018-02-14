@@ -1,7 +1,7 @@
 <!--STYLES-->
             <style>
                 /*DESKTOP - TABLET*/
-                energyLabelContainer #energyLabelBg{display:none !important;}#energyLabelBg{display:none !important;}
+                    energyLabelContainer #energyLabelBg{display:none !important;}#energyLabelBg{display:none !important;}
                     /*ANCHOS ESPECIALES*/
                         .col-id-ser{float:left; width:12.5%}
                         .col-bus-lat{float:left; width: 15%}
@@ -389,7 +389,7 @@
                                 <p class="elemento-navegacion align-left extra-margin-left despliega-productos">Productos<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                                 <div class="productos">
                                     <div class="row">
-                                        <div class="col-op-nav">
+                                        <div class="col-op-nav" id="filaProductos1">
                                             <a href="/ms/es_ES/campaigns/camas_colchones/index.html" class="elemento-desplegable-navegacion">Camas y colchones</a>
                                             <a href="/ms/es_ES/campaigns/muebles/index.html" class="elemento-desplegable-navegacion">Muebles, armarios y estanterías</a>
                                             <a href="/es/es/catalog/categories/departments/living_room/sofas_armchairs/" class="elemento-desplegable-navegacion">Sofás y sillones</a>
@@ -402,7 +402,7 @@
                                             <a href="/es/es/catalog/categories/departments/kitchen/appliances/" class="elemento-desplegable-navegacion">Electrodomésticos</a>
                                             <a href="/es/es/catalog/categories/departments/home_electronics/" class="elemento-desplegable-navegacion">Tecnología y accesorios</a>
                                         </div>
-                                        <div class="col-op-nav-fx">
+                                        <div class="col-op-nav-fx" id="filaProductos2">
                                             <a href="/ms/es_ES/campaigns/lavabos_fregaderos/index.html" class="elemento-desplegable-navegacion">Lavabos, fregaderos y grifería</a>
                                             <a href="/es/es/catalog/categories/departments/small_storage/" class="elemento-desplegable-navegacion">Organización y accesorios de almacenaje</a>
                                             <a href="/ms/es_ES/campaigns/juguetes/index.html" class="elemento-desplegable-navegacion">Juguetes</a>
@@ -416,59 +416,59 @@
                                         </div>
                                         <div class="col-banner-nav-fx">
                                             <!--COMPONENTE TEMPORAL-->
-                                        <style>
-                                            .hover-cajas{text-decoration: none !important}
-                                            .hover-cajas:hover .img-productos{filter:opacity(95%);}
-                                            .img-productos{margin-top:10px; width:100%;}
-                                            /*ARTÍCULOS
-                                            .enlace-elemento-interior-productos{text-decoration: none !important; color: black !important;}
-                                            .elemento-interior-productos{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 30px; right: 350px;}
-                                            .titulo-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
-                                            .descripcion-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
-                                            .precio-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
-                                            .ud-interior-productos{text-align:left;font-weight: lighter;font-size: 10px;}
-                                            ARTÍCULOS*/    
-                                            .bigoffers-caja{display: block; position: absolute; top: 10px; width: 497px; height: 260px; color: white; text-align: center;}
-                                            .bigoffers-fecha{font-size: 15px; font-weight: bolder; margin-bottom: -10px; margin-top: 60px; text-align: center;}    
-                                            .bigoffers-hasta{display: block; position: absolute; font-style: italic; font-size: 12px; left: 145px; top: 75px; font-weight: lighter;}
-                                            .bigoffers-dto{font-size: 100px; font-weight: bolder; margin-top: 0px; margin-bottom: 0px; text-align: center;}
-                                            .bigoffers-span-1{font-size: 58px;} 
-                                            .bigoffers-span-2{letter-spacing: -5px;} 
-                                            .bigoffers-span-3{font-size: 35px;} 
-                                            .bigoffers-cuerpo{text-transform: uppercase; font-weight: bolder; margin-top: -10px; margin-bottom: 0px; font-size: 22px; text-align: center;}
-                                            .bigoffers-family{display: block; position: absolute; width: 6%; top: 88px; left: 310px;}
-                                            .call-to-action-productos{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
-                                            .call-to-action-productos-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
-                                            .call-to-action-productos-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
-                                            .call-to-action-productos-flecha{display: block; position: absolute; float: left; font-size: 25px; right: 40px; bottom: 12px;transition: all .3s ease-out;}
-                                            .hover-cajas:hover .call-to-action-productos-titulo{text-decoration: underline !important}       
-                                            .hover-cajas:hover .call-to-action-productos-cuerpo{text-decoration: underline !important}  
-                                            .hover-cajas:hover .call-to-action-productos-flecha{transform: translateX(5px);}             
-                                            @-moz-document url-prefix(){
-                                                .call-to-action-productos{height: 55px; margin-top: 0px;}
-                                                .call-to-action-productos-flecha{bottom: 23px;}
-                                            }                      
-                                        </style>
-                                            <div class="caja-productos">
-                                                <a href="http://www.ikea.com/ms/es_ES/campaigns/ofertas-muebles-salon/index.html" class="hover-cajas" id="enlaceImagenProductos">                                    
-                                                    <img src="https://www.ikea.com/ms/es_ES/img/background-productos-BO.png" class="img-productos" id="imagenProductos">
-                                                    <div class="bigoffers-caja">
-                                                        <p class="bigoffers-fecha">Del 2 de febrero al 4 de marzo</p>
-                                                        <p class="bigoffers-hasta">Hasta</p>
-                                                        <p class="bigoffers-dto"><span class="bigoffers-span-1">-</span><span class="bigoffers-span-2">40</span><span class="bigoffers-span-3">%</span></p>
-                                                        <p class="bigoffers-cuerpo">en productos seleccionados</p>
-                                                        <img src="https://static.ikeainfo.com/badalona/0000/ofertas/ofertas-family/Tarjeta-IKEA-FAMILY.png " class="bigoffers-family" alt="Hazte socio IKEA FAMILY">
-                                                    </div>
-                                                </a>
-                                                <a href="http://www.ikea.com/ms/es_ES/campaigns/ofertas-muebles-salon/index.html" class="hover-cajas" id="enlaceCTAProductos">
-                                                    <div class="call-to-action-productos">
-                                                        <p class="call-to-action-productos-titulo" id="tituloCTAProductos">HASTA UN 40% DE DESCUENTO</p>
-                                                        <p class="call-to-action-productos-cuerpo" id="cuerpoCTAProductos">Del 2 de febrero al 4 de marzo, increíbles descuentos en una selección de productos.</p>
-                                                        <span class="call-to-action-productos-flecha">›</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        <!--COMPONENTE TEMPORAL-->
+                                                <style>
+                                                    .hover-cajas{text-decoration: none !important}
+                                                    .hover-cajas:hover .img-productos{filter:opacity(95%);}
+                                                    .img-productos{margin-top:10px; width:100%;}
+                                                    /*ARTÍCULOS
+                                                    .enlace-elemento-interior-productos{text-decoration: none !important; color: black !important;}
+                                                    .elemento-interior-productos{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 30px; right: 350px;}
+                                                    .titulo-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
+                                                    .descripcion-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
+                                                    .precio-interior-productos{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
+                                                    .ud-interior-productos{text-align:left;font-weight: lighter;font-size: 10px;}
+                                                    ARTÍCULOS*/    
+                                                    .bigoffers-caja{display: block; position: absolute; top: 10px; width: 497px; height: 260px; color: white; text-align: center;}
+                                                    .bigoffers-fecha{font-size: 15px; font-weight: bolder; margin-bottom: -10px; margin-top: 60px; text-align: center;}    
+                                                    .bigoffers-hasta{display: block; position: absolute; font-style: italic; font-size: 12px; left: 145px; top: 75px; font-weight: lighter;}
+                                                    .bigoffers-dto{font-size: 100px; font-weight: bolder; margin-top: 0px; margin-bottom: 0px; text-align: center;}
+                                                    .bigoffers-span-1{font-size: 58px;} 
+                                                    .bigoffers-span-2{letter-spacing: -5px;} 
+                                                    .bigoffers-span-3{font-size: 35px;} 
+                                                    .bigoffers-cuerpo{text-transform: uppercase; font-weight: bolder; margin-top: -10px; margin-bottom: 0px; font-size: 22px; text-align: center;}
+                                                    .bigoffers-family{display: block; position: absolute; width: 6%; top: 88px; left: 310px;}
+                                                    .call-to-action-productos{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
+                                                    .call-to-action-productos-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
+                                                    .call-to-action-productos-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
+                                                    .call-to-action-productos-flecha{display: block; position: absolute; float: left; font-size: 25px; right: 40px; bottom: 12px;transition: all .3s ease-out;}
+                                                    .hover-cajas:hover .call-to-action-productos-titulo{text-decoration: underline !important}       
+                                                    .hover-cajas:hover .call-to-action-productos-cuerpo{text-decoration: underline !important}  
+                                                    .hover-cajas:hover .call-to-action-productos-flecha{transform: translateX(5px);}             
+                                                    @-moz-document url-prefix(){
+                                                        .call-to-action-productos{height: 55px; margin-top: 0px;}
+                                                        .call-to-action-productos-flecha{bottom: 23px;}
+                                                    }                      
+                                                </style>
+                                                <div class="caja-productos">
+                                                    <a href="http://www.ikea.com/ms/es_ES/campaigns/ofertas-muebles-salon/index.html" class="hover-cajas" id="enlaceImagenProductos">                                    
+                                                        <img src="https://www.ikea.com/ms/es_ES/img/background-productos-BO.png" class="img-productos" id="imagenProductos">
+                                                        <div class="bigoffers-caja">
+                                                            <p class="bigoffers-fecha">Del 2 de febrero al 4 de marzo</p>
+                                                            <p class="bigoffers-hasta">Hasta</p>
+                                                            <p class="bigoffers-dto"><span class="bigoffers-span-1">-</span><span class="bigoffers-span-2">40</span><span class="bigoffers-span-3">%</span></p>
+                                                            <p class="bigoffers-cuerpo">en productos seleccionados</p>
+                                                            <img src="https://static.ikeainfo.com/badalona/0000/ofertas/ofertas-family/Tarjeta-IKEA-FAMILY.png " class="bigoffers-family" alt="Hazte socio IKEA FAMILY">
+                                                        </div>
+                                                    </a>
+                                                    <a href="http://www.ikea.com/ms/es_ES/campaigns/ofertas-muebles-salon/index.html" class="hover-cajas" id="enlaceCTAProductos">
+                                                        <div class="call-to-action-productos">
+                                                            <p class="call-to-action-productos-titulo" id="tituloCTAProductos">HASTA UN 40% DE DESCUENTO</p>
+                                                            <p class="call-to-action-productos-cuerpo" id="cuerpoCTAProductos">Del 2 de febrero al 4 de marzo, increíbles descuentos en una selección de productos.</p>
+                                                            <span class="call-to-action-productos-flecha">›</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            <!--COMPONENTE TEMPORAL-->
                                         </div>
                                     </div>
                                 </div>
@@ -477,7 +477,7 @@
                                 <p class="elemento-navegacion align-left despliega-estancias">Estancias<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                                 <div class="estancias">
                                     <div class="row">
-                                        <div class="col-op-nav">
+                                        <div class="col-op-nav"  id="filaEstancias">
                                             <a href="/es/es/catalog/categories/departments/bedroom/" class="elemento-desplegable-navegacion">Dormitorio</a>
                                             <a href="/es/es/catalog/categories/departments/living_room/" class="elemento-desplegable-navegacion">Salón</a>
                                             <a href="/es/es/catalog/categories/departments/dining/" class="elemento-desplegable-navegacion">Comedor</a>
@@ -492,28 +492,28 @@
                                         </div>
                                         <div class="col-est-nav">
                                             <!--COMPONENTE TEMPORAL-->
-                                            <style>
-                                                .hover-cajas{text-decoration: none !important}
-                                                .hover-cajas:hover .img-estancias-1{filter:opacity(95%);}
-                                                .img-estancias-1{margin-top:10px;}
-                                                .enlace-elemento-interior-estancias-1{text-decoration: none !important; color: black !important;}
-                                                .elemento-interior-estancias-1{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 35px; right: 620px;}
-                                                .titulo-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
-                                                .descripcion-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
-                                                .precio-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
-                                                .ud-interior-estancias-1{text-align:left;font-weight: lighter;font-size: 10px;}
-                                                .call-to-action-estancias-1{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
-                                                .call-to-action-estancias-1-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
-                                                .call-to-action-estancias-1-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
-                                                .call-to-action-estancias-1-flecha{display: block; position: absolute; float: left; font-size: 25px; left: 635px; bottom: 15px;transition: all .3s ease-out;}         
-                                                .hover-cajas:hover .call-to-action-estancias-1-titulo{text-decoration: underline !important}       
-                                                .hover-cajas:hover .call-to-action-estancias-1-cuerpo{text-decoration: underline !important}  
-                                                .hover-cajas:hover .call-to-action-estancias-1-flecha{transform: translateX(5px);}             
-                                                @-moz-document url-prefix(){
-                                                    .call-to-action-estancias-1{height: 60px;}
-                                                    .call-to-action-estancias-1-flecha{bottom: 25px;}
-                                                }      
-                                            </style>
+                                                <style>
+                                                    .hover-cajas{text-decoration: none !important}
+                                                    .hover-cajas:hover .img-estancias-1{filter:opacity(95%);}
+                                                    .img-estancias-1{margin-top:10px;}
+                                                    .enlace-elemento-interior-estancias-1{text-decoration: none !important; color: black !important;}
+                                                    .elemento-interior-estancias-1{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 35px; right: 620px;}
+                                                    .titulo-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
+                                                    .descripcion-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
+                                                    .precio-interior-estancias-1{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
+                                                    .ud-interior-estancias-1{text-align:left;font-weight: lighter;font-size: 10px;}
+                                                    .call-to-action-estancias-1{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
+                                                    .call-to-action-estancias-1-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
+                                                    .call-to-action-estancias-1-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
+                                                    .call-to-action-estancias-1-flecha{display: block; position: absolute; float: left; font-size: 25px; left: 635px; bottom: 15px;transition: all .3s ease-out;}         
+                                                    .hover-cajas:hover .call-to-action-estancias-1-titulo{text-decoration: underline !important}       
+                                                    .hover-cajas:hover .call-to-action-estancias-1-cuerpo{text-decoration: underline !important}  
+                                                    .hover-cajas:hover .call-to-action-estancias-1-flecha{transform: translateX(5px);}             
+                                                    @-moz-document url-prefix(){
+                                                        .call-to-action-estancias-1{height: 60px;}
+                                                        .call-to-action-estancias-1-flecha{bottom: 25px;}
+                                                    }      
+                                                </style>
                                                 <div class="caja-estancias">
                                                     <a href="https://www.ikea.com/es/es/catalog/categories/departments/lighting/tools/living_with_light/" class="hover-cajas" id="enlaceCajaEstancias1">                                    
                                                         <img src="https://www.ikea.com/ms/es_ES/img/header_04_estancias_1.jpg" class="img-estancias-1" id="imagenEstancias1">
@@ -542,28 +542,28 @@
                                         </div>
                                         <div class="col-est-nav">
                                             <!--COMPONENTE TEMPORAL-->
-                                            <style>
-                                                .hover-cajas{text-decoration: none !important}
-                                                .hover-cajas:hover .img-estabcias-2{filter:opacity(95%);}
-                                                .img-estancias-2{margin-top:10px;}
-                                                .enlace-elemento-interior-estancias-2{text-decoration: none !important; color: black !important;}
-                                                .elemento-interior-estancias-2{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 35px; right: 220px;}
-                                                .titulo-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
-                                                .descripcion-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
-                                                .precio-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
-                                                .ud-interior-estancias-2{text-align:left;font-weight: lighter;font-size: 10px;}
-                                                .call-to-action-estancias-2{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
-                                                .call-to-action-estancias-2-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
-                                                .call-to-action-estancias-2-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
-                                                .call-to-action-estancias-2-flecha{display: block; position: absolute; float: left; font-size: 25px; right: 20px; bottom: 15px;transition: all .3s ease-out;}         
-                                                .hover-cajas:hover .call-to-action-estancias-2-titulo{text-decoration: underline !important}       
-                                                .hover-cajas:hover .call-to-action-estancias-2-cuerpo{text-decoration: underline !important}  
-                                                .hover-cajas:hover .call-to-action-estancias-2-flecha{transform: translateX(5px);}             
-                                                @-moz-document url-prefix(){
-                                                    .call-to-action-estancias-2{height: 60px;}
-                                                    .call-to-action-estancias-2-flecha{bottom: 25px;}
-                                                }       
-                                            </style>      
+                                                <style>
+                                                    .hover-cajas{text-decoration: none !important}
+                                                    .hover-cajas:hover .img-estabcias-2{filter:opacity(95%);}
+                                                    .img-estancias-2{margin-top:10px;}
+                                                    .enlace-elemento-interior-estancias-2{text-decoration: none !important; color: black !important;}
+                                                    .elemento-interior-estancias-2{width: 140px; background-color: rgba(255,255,255,0.6); padding:5px; position: absolute; top: 35px; right: 220px;}
+                                                    .titulo-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 14px;font-weight: bolder;}
+                                                    .descripcion-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px; font-size: 12px;font-weight: lighter;}
+                                                    .precio-interior-estancias-2{text-align:left;margin-top: 0px; margin-bottom: 0px;font-size: 18px;font-weight: bolder;}
+                                                    .ud-interior-estancias-2{text-align:left;font-weight: lighter;font-size: 10px;}
+                                                    .call-to-action-estancias-2{background-color: #fafafa !important; width: 100%; height: 45px; margin-top: -5px; color: black !important;}        
+                                                    .call-to-action-estancias-2-titulo{text-align:left; font-size: 12px; margin-bottom: 0px; padding-top: 5px; padding-left: 10px; font-weight: bolder;}    
+                                                    .call-to-action-estancias-2-cuerpo{text-align:left; font-size: 10px; padding-left: 10px; margin-top: 5px;}    
+                                                    .call-to-action-estancias-2-flecha{display: block; position: absolute; float: left; font-size: 25px; right: 20px; bottom: 15px;transition: all .3s ease-out;}         
+                                                    .hover-cajas:hover .call-to-action-estancias-2-titulo{text-decoration: underline !important}       
+                                                    .hover-cajas:hover .call-to-action-estancias-2-cuerpo{text-decoration: underline !important}  
+                                                    .hover-cajas:hover .call-to-action-estancias-2-flecha{transform: translateX(5px);}             
+                                                    @-moz-document url-prefix(){
+                                                        .call-to-action-estancias-2{height: 60px;}
+                                                        .call-to-action-estancias-2-flecha{bottom: 25px;}
+                                                    }       
+                                                </style>      
                                                 <div class="caja-estancias">
                                                     <a href="https://www.ikea.com/es/es/catalog/categories/departments/cooking/" class="hover-cajas" id="enlaceCajaEstancias2">                                    
                                                         <img src="https://www.ikea.com/ms/es_ES/img/header_04_estancias_2.jpg" class="img-estancias-2" id="imagenEstancias2">
@@ -571,10 +571,10 @@
                                                             <div class="elemento-interior-estancias-2" id="cajaProductoBannerEstancias2">
                                                                 <p class="titulo-interior-estancias-2" id="tituloProductoBannerEstancias2">VARDAGEN</p>
                                                                 <p class="descripcion-interior-estancias-2" id="descProductoBannerEstancias2">Fuente de horno</p>
-                                                                <p class="precio-interior-estancias-2" id="precioProductoBannerEstancias1">€8,99<span class="ud-interior-estancias-2">/ud</span></p>
+                                                                <p class="precio-interior-estancias-2" id="precioProductoBannerEstancias2">€8,99<span class="ud-interior-estancias-2">/ud</span></p>
                                                                 <div class="dot-ratingsreviews-desplegable-banner">
                                                                     <span class="hp-rating-stars hp-rating-stars-off" aria-hidden="true">  ★★★★★ </span>
-                                                                    <span class="hp-rating-stars hp-rating-stars-on" style="width:0% !important;" aria-hidden="true" id="porcentajeProductoBannerEstancias1">  ★★★★★ </span>
+                                                                    <span class="hp-rating-stars hp-rating-stars-on" style="width:0% !important;" aria-hidden="true" id="porcentajeProductoBannerEstancias2">  ★★★★★ </span>
                                                                     <p class="hp-ratings-number" id="reviewsProductoBannerEstancias2">(0)</p>
                                                                 </div>
                                                             </div>
@@ -597,7 +597,7 @@
                                 <p class="elemento-navegacion align-left despliega-novedades">Novedades<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                                 <div class="novedades">
                                     <div class="row">
-                                        <div class="col-op-100">
+                                        <div class="col-op-100" id="filaNovedades">
                                             <a href="/ms/es_ES/campaigns/novedades/index.html" class="elemento-desplegable-navegacion">Todas las novedades</a>
                                             <a href="/ms/es_ES/campaigns/precios_bajos/index.html" class="elemento-desplegable-navegacion">Hemos bajado el precio</a>
                                         </div>
@@ -608,7 +608,7 @@
                                 <p class="elemento-navegacion align-left despliega-promociones">Promociones<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                                 <div class="promociones">
                                     <div class="row">
-                                        <div class="col-op-100">
+                                        <div class="col-op-100" id="filaPromociones">
                                             <a href="/ms/es_ES/campaigns/ofertas-y-promociones.html" class="elemento-desplegable-navegacion">Promociones</a>
                                             <a href="/ms/es_ES/campaigns/ofertas_combo_muebles/index.html" class="elemento-desplegable-navegacion">Descuentos especiales</a>
                                         </div>
@@ -619,7 +619,7 @@
                                 <p class="elemento-navegacion align-center despliega-inspiracion">Inspiración<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                                 <div class="inspiracion">
                                     <div class="row">
-                                        <div class="col-op-100">
+                                        <div class="col-op-100" id="filaInspiracion">
                                             <a href="/es/es/ideas/" class="elemento-desplegable-navegacion">Ideas</a>
                                             <a href="/ms/es_ES/campaigns/galeriafotos/index.html" class="elemento-desplegable-navegacion">Galería de fotos</a>
                                         </div>
@@ -630,7 +630,7 @@
                                 <p class="elemento-navegacion align-right extra-margin-right despliega-sobreIKEA">Sobre IKEA<img src="https://www.ikea.com/ms/es_ES/campaigns/new/img/Arrows-Down-4-icon.png" class="flecha-btn"></p>
                                 <div class="sobreIKEA">
                                     <div class="row">
-                                        <div class="col-op-50">
+                                        <div class="col-op-50" id="filaEstoEsIKEA1">
                                             <a href="/ms/es_ES/customer-service/index.html" class="elemento-desplegable-navegacion">Atención al cliente</a>
                                             <a href="/ms/es_ES/customer-service/about-shopping/catalogue-and-brochures/index.html" class="elemento-desplegable-navegacion">Catálogos</a>
                                             <a href="/ms/es_ES/this-is-ikea/index.html" class="elemento-desplegable-navegacion">Esto es IKEA</a>
@@ -640,7 +640,7 @@
                                             <a href="https://www.family.ikea.es/mapa/" class="elemento-desplegable-navegacion">IKEA FAMILY</a>
                                             <a href="https://ikeamuseum.com/en/" class="elemento-desplegable-navegacion">Museo IKEA</a>
                                         </div>
-                                        <div class="col-op-50">
+                                        <div class="col-op-50" id="filaEstoEsIKEA2">
                                             <a href="/ms/es_ES/this-is-ikea/people-and-planet/index.html" class="elemento-desplegable-navegacion">Personas + Planeta</a>
                                             <a href="/ms/es_ES/customer-service/about-our-products/planning-tools/index.html" class="elemento-desplegable-navegacion">Planificadores</a>
                                             <a href="/es/es/catalog/categories/departments/food/#restaurante" class="elemento-desplegable-navegacion">Restaurante</a>
@@ -702,7 +702,7 @@
                         <div>
                             <div>
                                 <div class="elemento-barra-navegacion-movil extra-margin-left-movil productos-mvl dropdown-toggle" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</div>
-                                <ul class="dropdown-menu dropdown-productos" aria-labelledby="dropdownMenu2">
+                                <ul class="dropdown-menu dropdown-productos" aria-labelledby="dropdownMenu2" id="productosMovil">
                                     <a href="https://www.ikea.com/ms/es_ES/campaigns/camas_colchones/index.html" class="enlace-desplegables-movil">
                                         <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/camas_colchones_camas.jpg" class="img-productos-movil">
                                         <p class="elemento-desplegables-movil simple">Camas y colchones</p>
@@ -738,7 +738,7 @@
                                         <p class="elemento-desplegables-movil simple">Iluminación</p>
                                         <span class="flecha-btn-movil">›</span>
                                     </a>
-                                    <a href="" class="enlace-desplegables-movil">
+                                    <a href="https://m.ikea.com/es/es/pages/department_pages/cocinar/" class="enlace-desplegables-movil">
                                         <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/menaje_ollas.jpg" class="img-productos-movil">
                                         <p class="elemento-desplegables-movil simple">Menaje y utensilios de cocina</p>
                                         <span class="flecha-btn-movil">›</span>
@@ -807,7 +807,7 @@
                             </div>
                             <div>
                                 <div class="elemento-barra-navegacion-movil estancias-mvl dropdown-toggle" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estancias</div>
-                                <ul class="dropdown-menu dropdown-estancias" aria-labelledby="dropdownMenu3">
+                                <ul class="dropdown-menu dropdown-estancias" aria-labelledby="dropdownMenu3" id="estanciasMovil">
                                     <a href="https://m.ikea.com/es/es/pages/department_pages/dormitorios/" class="enlace-desplegables-movil">
                                         <img src="https://m.ikea.com/ms/es_ES/img/taxonomia/visual_nav/camas_colchones_camas.jpg" class="img-productos-movil">
                                         <p class="elemento-desplegables-movil simple">Dormitorio</p>
@@ -867,7 +867,7 @@
                             </div>
                             <div>
                                 <div class="elemento-barra-navegacion-movil novedades-mvl dropdown-toggle" role="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Novedades</div>
-                                <ul class="dropdown-menu dropdown-novedades" aria-labelledby="dropdownMenu4">
+                                <ul class="dropdown-menu dropdown-novedades" aria-labelledby="dropdownMenu4" id="novedadesMovil">
                                     <a href="https://www.ikea.com/ms/es_ES/campaigns/novedades/index.html" class="enlace-desplegables-movil">
                                         <img src="/ms/es_ES/img/novedades_header.png" class="img-productos-movil">
                                         <p class="elemento-desplegables-movil simple">Todas las novedades</p>
