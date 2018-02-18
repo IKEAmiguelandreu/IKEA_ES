@@ -579,23 +579,71 @@
             <!--SCRIPT-->
         <!--MINIBOX-->
         <!--LANGUAGE SELECTOR PARA INGLES-->
-            <script>
+            <script>                
                 function changeLanguage(){
-                    var from = document.location.href.split("/");
-                    var to = from[0];
-                    if(from[4]=="ca"||from[4]=="eu"){
-                        from[2]="www.ikea.com";
-                        from[4]="en";
-                        for (var i = 1; i < from.length; i++) {
-                            to+="/"+from[i]
-                        };
-                    }else{
-                        from[4]="en";
-                        for (var i = 1; i < from.length; i++) {
-                            to+="/"+from[i]
-                        };
-                    };	
+                    var whereAmI;
+                    try {
+                        var urlShoppin = document.location.href.split("?");
+                        if(urlShoppin[0]=="http://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="https://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" || 
+                        urlShoppin[0]=="http://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="https://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="http://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                            whereAmI = 1;
+                        }
+                        else{
+                            whereAmI = 0;
+                        }
+                    } catch (error) {
+                        whereAmI = 0;
+                    }
+                    if(whereAmI==1){
+                        if(urlShoppin[0]=="http://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                         urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                            var lang = urlShoppin[1].split("&");
+                            for(var h = 0; h<lang.length; h++){
+                                if(lang[i]=="langId=-5")lang[i]="langId=-41";
+                            }                        
+                            urlShoppin = urlShoppin[0]+"?";
+                            for (var i = 0; i<lang.length; i++){
+                                urlShoppin+=lang[i]+"&";
+                            }
+                        }
+                        else if(urlShoppin[0]=="https://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" || 
+                        urlShoppin[0]=="http://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="https://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="http://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                            urlShoppin[0] = "//www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay";
+                            var lang = urlShoppin[1].split("&");
+                            for(var h = 0; h<lang.length; h++){
+                                if(lang[i]=="langId=-5")lang[i]="langId=-41";
+                            }                        
+                            urlShoppin = urlShoppin[0]+"?";
+                            for (var i = 0; i<lang.length; i++){
+                                urlShoppin+=lang[i]+"&";
+                                }
+                        }
+                        document.location.href = urlShoppin;
+                    }
+                    else if(whereAmI==0){
+                        var from = document.location.href.split("/");
+                        var to = from[0];
+                        if(from[4]=="ca"||from[4]=="eu"){
+                            from[2]="www.ikea.com";
+                            from[4]="en";
+                            for (var i = 1; i < from.length; i++) {
+                                to+="/"+from[i]
+                            };
+                        }else{
+                            from[4]="en";
+                            for (var i = 1; i < from.length; i++) {
+                                to+="/"+from[i]
+                            };
+                        };	
                     document.location.href = to;
+                    }
+                    
                 };
             </script>
         <!--LANGUAGE SELECTOR PARA INGLES-->
@@ -767,13 +815,19 @@
                                 }
                                 else{
                                     if(islands_url == "http://www.canarias.ikea.es/"){
-                                        islands_url+=""
+                                        islands_url+="&utm_source=mh-can";
                                     }
                                     else if(islands_url == "http://www.baleares.ikea.es/"){
                                         islands_url+="&utm_source=mh-bal";
                                     }
                                 }
-                                document.location.href = islands_url;
+                                if(islands_url == "http://www.canarias.ikea.es/"){
+                                        islands_url+="&utm_source=mh-can";
+                                    }
+                                else if(islands_url == "http://www.baleares.ikea.es/"){
+                                    islands_url+="&utm_source=mh-bal";
+                                }
+                            document.location.href = islands_url;
                         }
                     /*THIS FUNCTION WORKS WHEN CUSTOMER CLICKS ON ISLANDS IN HEADER*/
                 </script>
