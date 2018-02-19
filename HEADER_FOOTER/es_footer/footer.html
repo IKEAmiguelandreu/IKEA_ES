@@ -603,7 +603,7 @@
                          urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay"){
                             var lang = urlShoppin[1].split("&");
                             for(var h = 0; h<lang.length; h++){
-                                if(lang[i]=="langId=-5")lang[i]="langId=-41";
+                                if(lang[h]=="langId=-5")lang[h]="langId=-41";
                             }                        
                             urlShoppin = urlShoppin[0]+"?";
                             for (var i = 0; i<lang.length; i++){
@@ -617,7 +617,7 @@
                             urlShoppin[0] = "//www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay";
                             var lang = urlShoppin[1].split("&");
                             for(var h = 0; h<lang.length; h++){
-                                if(lang[i]=="langId=-5")lang[i]="langId=-41";
+                                if(lang[h]=="langId=-5")lang[h]="langId=-41";
                             }                        
                             urlShoppin = urlShoppin[0]+"?";
                             for (var i = 0; i<lang.length; i++){
