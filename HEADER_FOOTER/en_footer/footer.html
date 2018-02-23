@@ -296,27 +296,81 @@
 <!--LANGUAGE SELECTOR PARA INGLES-->
 <script>
     function changeLanguage(idioma){
+        var whereAmI;
+        try {
+            var urlShoppin = document.location.href.split("?");
+            if(urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                urlShoppin[0]=="http://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                whereAmI = 1;
+            }
+        } catch (error) {
+            whereAmI = 0;
+        }
         var from = document.location.href.split("/")
         var to = from[0];
         if(idioma == "es"){
-            for (var i = 1; i < from.length; i++) {
-                from[4]="es";
-                to+="/"+from[i]
-            };
+            if(whereAmI==1){
+                var lang = urlShoppin[1].split("&");
+                for(var h = 0; h<lang.length; h++){
+                    if(lang[h]=="langId=-41")lang[h]="langId=-5";
+                }                        
+                urlShoppin = urlShoppin[0]+"?";
+                for (var i = 0; i<lang.length; i++){
+                    urlShoppin+=lang[i]+"&";
+                }
+                document.location.href = urlShoppin;
+            }
+            else if(whereAmI==0){
+                for (var i = 1; i < from.length; i++) {
+                    from[4]="es";
+                    to+="/"+from[i]
+                };
+                document.location.href = to;
+            }
+            
         }else if(idioma == "ca"){
-            from[2]="ca.ikea.com";
-            from[4]="ca";
-            for (var i = 1; i < from.length; i++) {
-                to+="/"+from[i]
-            };
+            if(whereAmI==1){
+                urlShoppin[0] = "//ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay";
+                var lang = urlShoppin[1].split("&");
+                for(var h = 0; h<lang.length; h++){
+                    if(lang[h]=="langId=-41")lang[h]="langId=-5";
+                }                        
+                urlShoppin = urlShoppin[0]+"?";
+                for (var i = 0; i<lang.length; i++){
+                    urlShoppin+=lang[i]+"&";
+                }
+                document.location.href = urlShoppin;
+            }
+            else if(whereAmI==0){
+                from[2]="ca.ikea.com";
+                from[4]="ca";
+                for (var i = 1; i < from.length; i++) {
+                    to+="/"+from[i]
+                };
+                document.location.href = to;                
+            }
         }else if(idioma == "eu"){
-            from[2]="eu.ikea.com";
-            from[4]="eu";
-            for (var i = 1; i < from.length; i++) {
-                to+="/"+from[i]
-            };
+            if(whereAmI==1){
+                urlShoppin[0] = "//eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay";
+                var lang = urlShoppin[1].split("&");
+                for(var h = 0; h<lang.length; h++){
+                    if(lang[h]=="langId=-41")lang[h]="langId=-5";
+                }                        
+                urlShoppin = urlShoppin[0]+"?";
+                for (var i = 0; i<lang.length; i++){
+                    urlShoppin+=lang[i]+"&";
+                }
+                document.location.href = urlShoppin;
+            }
+            else if(whereAmI==0){
+                from[2]="eu.ikea.com";
+                from[4]="eu";
+                for (var i = 1; i < from.length; i++) {
+                    to+="/"+from[i]
+                };
+                document.location.href = to;     
+            }            
         }
-        document.location.href = to;
     };    
 </script>
 <!--LANGUAGE SELECTOR PARA INGLES-->
