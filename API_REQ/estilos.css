@@ -1,0 +1,273 @@
+body{font-family: Verdana;}
+.divArticulo{
+    height: 466px;
+    margin-bottom: 5px;
+}
+.divArticuloCar{
+    height: 435px;
+    margin-bottom: 5px;
+}
+.divBreak{
+    height: 466px;
+    margin-bottom: 5px;
+}
+.divArticulo:hover{
+    border: solid thin lightgrey;
+    box-shadow: lightgrey 2px 2px 7px;
+}
+.divArticulo:hover .comprar{
+    display: block;
+}
+.divArticuloCar:hover{
+    border: solid thin lightgrey;
+    box-shadow: lightgrey 2px 2px 7px;
+}
+.divArticuloCar:hover .comprar{
+    display: block;
+}
+.a-IKEA{text-decoration: none;}
+.a-IKEA:hover{text-decoration: none;}
+.nombre-articulo{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333;
+    padding-right: 5px;
+    padding-top: 1px;
+    cursor: pointer;
+    font-style: normal;
+    margin: 0;
+}
+.desc-articulo{
+    color: black;
+    line-height: 16px;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    font-style: normal;
+    margin: 0;
+    text-transform: none !important;
+    font-weight: lighter;
+}
+.precio-articulo{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333;
+    font-weight: bold;
+    clear: left;
+    font-style: normal;
+    display: block;
+    margin-top: 10px;
+    margin: 0;
+}
+.precio-BTI{
+    background-color: #FFD000;
+    padding: 5px;
+    width: 119px;
+    box-shadow: red 4px 4px;
+}
+.precio-articulo-multiple{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 26px;
+    color: #333;
+    font-weight: bold;
+    clear: left;
+    font-style: normal;
+    display: block;
+    margin-top: 10px;
+    margin: -5px 0;
+}
+.ud_articulo{
+    font-size: 50%;
+}
+.img-producto{
+    margin-bottom: 35px;
+    max-width: 100% !important;
+}
+.img-newlowerprice{
+    top: 213px;
+    display: block;
+    position: absolute;
+}
+.precioNLP{
+    font-size: 12px;
+    color: #000;
+    text-decoration: line-through;
+    line-height: 14px;
+    cursor: default;
+    margin: 0;
+}
+.cabeceraFamily{
+    color: #F60;
+    margin: 0;
+    font-size: 10px;  
+}
+.precio-no-socio{
+    margin: 0;
+    font-size: 10px; 
+}
+/* R&R*/
+    .dot-ratingsreviews-PLP-api{display: inline-block!important; vertical-align: middle!important; white-space: nowrap!important; height: 25px; margin-top: -2px;}
+    .api-rating-stars{position: relative!important; display: block!important; overflow: hidden!important;}
+    .api-rating-stars-off{font-size: 20px !important; color: #eee!important;}
+    .api-rating-stars-on{font-size: 20px !important; color: #fc0!important; margin-top: -1em!important; margin-top: -28px !important; padding-top: 1px;}
+    .api-ratings-number{font-size: 11px; left: 103px; margin-top: -21px; position: absolute; font-weight: normal !important;}      
+    .api-ratings-number-Car{font-size: 11px; left: 103px; margin-top: -21px; position: relative; font-weight: normal !important;}      
+/* R&R*/
+.comprar{
+    cursor: pointer;
+    background: linear-gradient(to bottom, #3373c7 0%, #0051ba 100%);
+    font-weight: bold;
+    font-size: 11px !important;
+    text-align: center;
+    color: white;
+    display: block;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 10px;
+    width: 105px;
+    border-radius: 3px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    filter: alpha(opacity=0);
+    display:none;
+}
+.comprar a {
+    color: white!important;
+    text-decoration: none !important;
+    padding: 10px 11px;
+    outline: 0;
+}
+.comprarCar{
+    cursor: pointer;
+    background: linear-gradient(to bottom, #3373c7 0%, #0051ba 100%);
+    font-weight: bold;
+    font-size: 11px !important;
+    text-align: center;
+    color: white;
+    display: block;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 20px;
+    width: 105px;
+    border-radius: 3px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    filter: alpha(opacity=0);
+    display:none;
+}
+.comprarCar a {
+    color: white!important;
+    text-decoration: none !important;
+    padding: 10px 11px;
+    outline: 0;
+}
+.icon-carrito {
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    width: 14px;
+    height: 14px;
+    background-image: url(http://www.ikea.com/ms/es_ES/campaigns/novedades/img/add-to-list.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.newImgCss {
+    background-color: #CA5008;
+    font-size: 14px;
+    color: #fff;
+    height: 16px;
+    width: auto;
+    border-radius: 12px;
+    padding: 0px 10px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    margin-top: -20px;
+}
+
+  
+  .home-product-new-hldr {
+    position: relative;
+    width:1136px;
+  }  
+    
+  .home-product-new {
+    width:1136px;
+    overflow:hidden;
+  }
+  
+  .home-grid.products-grid.products-grid--max-4 {
+    transition:-ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s;
+    position:relative;
+    white-space:nowrap;
+  }
+  
+  .item-container {
+      display: inline-block;
+      margin: 4px;
+      vertical-align: top;
+      width:278px;
+  }  
+  
+  .slider-btn-hldr-left {
+      left: -32px;
+  }
+  
+  .slider-btn-hldr-right {
+      right: -32px;
+  }
+  
+  .slider-btn-hldr {
+      bottom: 0;
+      display: block;
+      padding: 0;
+      width: 24px;
+      position: absolute;
+      top: 40%;
+      z-index: 1;
+  }
+  
+  .slider-btn {
+      background-color: transparent;
+      border: 0 none;
+      color: buttontext;
+      cursor: pointer;
+      display: block;
+  }
+  
+  #left-btn {
+          display: block;
+  }
+  
+  .slider-btn svg{
+    width: 24px;
+    height: 24px;
+  }
+    
+  .products-grid .item {
+      margin-left: 5px;
+      background: white; 
+      float: left;
+      width: 267px;
+  }
+
+  .productDetails{
+    margin-left: 10px;
+  }

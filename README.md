@@ -27,3 +27,17 @@ user: migandr
 description: files with scripts and css that IKEA.es loads. Will help us to develop from local with a 'more' definitive version.
              campaigns_template that must be the base for every design that we made at campaigns.
 ********************************************************************************************************************************* 
+
+*********************************************************************************************************************************
+API_REQ
+date creation: 23/02/2018
+user: migandr 
+description: Functions to pain API Products.
+             Api_Products: a PLP that is not enable to filter or remove elements.
+                           Purchase button is set up for elements in the example.
+             Api_products_Breadcrumbs: a PLP that enables to filter elements (function is not set up).
+                           A function to add breadcrumbs following the structure defined.
+             Api_carousel: a non responsive carousel with an articles lists prepared to test. 
+                           To make it work properly yo need to configure number of elements in the carousel (-(lenght of array / 2))
+                           Purchase btn is not configured.
+             estilos.css:  Stylesheet for all previous version.
