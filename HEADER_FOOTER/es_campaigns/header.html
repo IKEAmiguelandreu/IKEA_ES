@@ -2,6 +2,9 @@
             <style>
                 /*DESKTOP - TABLET*/
                     energyLabelContainer #energyLabelBg{display:none !important;}#energyLabelBg{display:none !important;}
+                    .visible-ele{display:block !important}
+                    .visible-ele::after{display: block !important;}
+                    .visible-ele::before{display:block !important}
                     /*ANCHOS ESPECIALES*/
                         .col-id-ser{float:left; width:12.5%}
                         .col-bus-lat{float:left; width: 15%}
@@ -180,24 +183,24 @@
                         .promociones-mvl{display: none;}
                         .tiendas-mvl{display: none;}
                         .conecta-mvl{display: none;}
-                        .novedades-mvl-desplegable{display: block;}
-                        .promociones-mvl-desplegable{display: block;}
-                        .tiendas-mvl-desplegable{display: block;}
-                        .conecta-mvl-desplegable{display: block;}
+                        .novedades-mvl-desplegable{display: block !important;}
+                        .promociones-mvl-desplegable{display: block !important;}
+                        .tiendas-mvl-desplegable{display: block !important;}
+                        .conecta-mvl-desplegable{display: block !important;}
                         @media (min-width:360px){
-                            .novedades-mvl{display: block;}
+                            .novedades-mvl{display: block !important;}
                             .novedades-mvl-desplegable{display: none;}
                         }
                         @media (min-width:480px){
-                            .promociones-mvl{display: block;}
+                            .promociones-mvl{display: block !important;}
                             .promociones-mvl-desplegable{display: none;}
                         }
                         @media (min-width:560px){
-                            .tiendas-mvl{display: block;}
+                            .tiendas-mvl{display: block !important;}
                             .tiendas-mvl-desplegable{display: none;}
                         }
                         @media (min-width:660px){
-                            .conecta-mvl{display: block;}
+                            .conecta-mvl{display: block !important;}
                             .conecta-mvl-desplegable{display: none;}
                         }
                         @media (min-width:660px) and (max-width:990px){
@@ -700,7 +703,7 @@
                 <!--BARRA NAVEGACION-->
                     <div class="navbar-header top-navegacion-movil">
                         <div>
-                            <div>
+                            <div class="visible-ele">
                                 <div class="elemento-barra-navegacion-movil extra-margin-left-movil productos-mvl dropdown-toggle" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</div>
                                 <ul class="dropdown-menu dropdown-productos" aria-labelledby="dropdownMenu2" id="productosMovil">
                                     <a href="https://www.ikea.com/ms/es_ES/campaigns/camas_colchones/index.html" class="enlace-desplegables-movil">
@@ -805,7 +808,7 @@
                                     </a>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="visible-ele">
                                 <div class="elemento-barra-navegacion-movil estancias-mvl dropdown-toggle" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estancias</div>
                                 <ul class="dropdown-menu dropdown-estancias" aria-labelledby="dropdownMenu3" id="estanciasMovil">
                                     <a href="https://m.ikea.com/es/es/pages/department_pages/dormitorios/" class="enlace-desplegables-movil">
@@ -865,7 +868,7 @@
                                     </a>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="visible-ele">
                                 <div class="elemento-barra-navegacion-movil novedades-mvl dropdown-toggle" role="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Novedades</div>
                                 <ul class="dropdown-menu dropdown-novedades" aria-labelledby="dropdownMenu4" id="novedadesMovil">
                                     <a href="https://www.ikea.com/ms/es_ES/campaigns/novedades/index.html" class="enlace-desplegables-movil">
