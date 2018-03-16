@@ -584,12 +584,9 @@
                     var whereAmI;
                     try {
                         var urlShoppin = document.location.href.split("?");
-                        if(urlShoppin[0]=="http://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                        urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                        urlShoppin[0]=="https://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" || 
-                        urlShoppin[0]=="http://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                        urlShoppin[0]=="https://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                        urlShoppin[0]=="http://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                        if(urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="https://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" ||
+                        urlShoppin[0]=="https://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay"){
                             whereAmI = 1;
                         }
                         else{
@@ -599,8 +596,7 @@
                         whereAmI = 0;
                     }
                     if(whereAmI==1){
-                        if(urlShoppin[0]=="http://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                         urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                        if(urlShoppin[0]=="https://www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay"){
                             var lang = urlShoppin[1].split("&");
                             for(var h = 0; h<lang.length; h++){
                                 if(lang[h]=="langId=-5")lang[h]="langId=-41";
@@ -610,10 +606,8 @@
                                 urlShoppin+=lang[i]+"&";
                             }
                         }
-                        else if(urlShoppin[0]=="https://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" || 
-                        urlShoppin[0]=="http://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                        urlShoppin[0]=="https://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay" ||
-                        urlShoppin[0]=="http://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay"){
+                        else if(urlShoppin[0]=="https://eu.ikea.com/es/eu/webapp/wcs/stores/servlet/InterestItemDisplay"||
+                        urlShoppin[0]=="https://ca.ikea.com/es/ca/webapp/wcs/stores/servlet/InterestItemDisplay"){
                             urlShoppin[0] = "//www.ikea.com/webapp/wcs/stores/servlet/InterestItemDisplay";
                             var lang = urlShoppin[1].split("&");
                             for(var h = 0; h<lang.length; h++){
@@ -721,7 +715,7 @@
                     /*DECIDES IF POP UP SHOULD VE SHOWN OR NOT*/
                     function revisarCookie(c_val){
                         if(!sessionStorage.nopopup){
-                            if(c_val=="http://www.ikea.com/es/es/" || c_val=="http://ca.ikea.com/es/ca/" || c_val=="http://eu.ikea.com/es/eu/" || c_val =="https://www.ikea.com/es/es/" || c_val=="https://ca.ikea.com/es/ca/" || c_val=="https://eu.ikea.com/es/eu/"){
+                            if(c_val =="https://www.ikea.com/es/es/" || c_val=="https://ca.ikea.com/es/ca/" || c_val=="https://eu.ikea.com/es/eu/"){
                                 setMyCookie();
                             }
                             else if(c_val=="http://www.baleares.ikea.es/" || c_val=="http://www.canarias.ikea.es/" || c_val=="https://www.baleares.ikea.es/" || c_val=="https://www.canarias.ikea.es/"){
